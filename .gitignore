@@ -1,0 +1,16 @@
+## IGNORE EVERYTHING -- MANUALLY INCLUDE INSTEAD
+*
+
+## EXCEPTIONS
+
+# basic files
+!.gitignore
+!README.md
+
+!brigandine.html
+!characters.html
+!combat.html
+!classes/
+!classes/*.html
+
+.DS_Store
