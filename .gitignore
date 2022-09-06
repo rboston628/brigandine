@@ -8,9 +8,13 @@
 !README.md
 
 !index.html
+!toc.html
 !characters.html
 !combat.html
 !classes/
 !classes/*.html
+
+!resources/
+!resources/cover_knight.jpeg
 
 .DS_Store
