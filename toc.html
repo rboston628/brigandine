@@ -2,24 +2,58 @@
 <html>
 <head>
 	<base href="">
+	<style>
+		.left {
+		  height: 100%; /* Full-height: remove this if you want "auto" height */
+		  width: 288px; /* Set the width of the sidebar */
+		  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+		  z-index: 1; /* Stay on top */
+		  top: 0; /* Stay at the top */
+		  left: 0;
+		  /*background-color: #111; /* Black */
+		  overflow-x: hidden; /* Disable horizontal scroll */
+		  padding-top: 0px;
+		}
+		.verticalLine {
+			margin-left: 288px; /* Same as the width of the sidebar */
+			border-left: 4px solid black;
+			position: absolute;
+			height: 99%;
+			padding-top: 0px;
+		}
+	</style>	
 </head>
 
 <body>
 
+<div class="left">
 <h1>CONTENTS</h1>
-
-<div>
 <ul>
-	<li> <a href="characters.html" target="main">Character Creation</a>
+	<li> <a href="basic.html" target="main">Basic Rule Overview</a>
 		<ul>
-			<li> <a href="characters.html#stats-and-dice" target="main">Stats and the Dice Chain</a>
+			<li> <a href="basic.html#intro" target="main">Introduction</a></li>
+			<li> <a href="basic.html#char-intro" target="main">Players and Characters</a></li>
+			<li> <a href="basic.html#core-mechanic" target="main">The Core Mechanic</a></li>
+			<li> <a href="basic.html#dice-chain" target="main">The Dice Chain</a> 
 				<ul>
-					<li> <a href="characters.html#stats" target="main"> ATK, AIM, DEF, IQ </a></li>
-					<li> <a href="characters.html#dice-chain" target="main"> The Dice Chain </a></li>
-					<li> <a href="characters.html#hits" target="main"> hits, atk, def </a></li>
+					<li> <a href="basic.html#weird-dice" target="main">The weird ones</a></li>
+					<li> <a href="basic.html#exploding-dice" target="main">Exploding dice</a></li>
 				</ul>
 			</li>
-			<li> Starting Points </li>
+			<li> <a href="basic.html#use-minis" target="main">Use of Miniatures</a></li>
+			<li> Wilderness Exploration </li>
+			<li> Dungeon Exploration </li>
+		</ul>
+	</li>
+	<li> <a href="characters.html" target="main">Character Creation</a>
+		<ul>
+			<li> <a href="charactershtml#point-values" target="main">Point Values</a> </li>
+			<li> <a href="characters.html#stats-and-dice" target="main">Character Stats</a>
+				<ul>
+					<li> <a href="characters.html#stats" target="main"> Core stats</a></li>
+					<li> <a href="characters.html#hits" target="main"> Class stats</a></li>
+				</ul>
+			</li>
 			<li> <a href="characters.html#class-list" target="main">Character Classes </a>
 				<ul>
 					<li> <a href="classes/knight.html" target="main">Knight</a> </li>
@@ -30,9 +64,9 @@
 					<li> <a href="classes/peasant.html" target="main">Peasant</a> </li>
 				</ul>
 			</li>
-			
 		</ul>
 	</li>
+	<li> Items and Equipment </li>
 	<li> <a href="combat.html" target="main">Combat</a>
 		<ul>
 			<li> Skirmish Melee </li>
@@ -42,6 +76,8 @@
 	</li>
 </ul>
 </div>
+
+<div class="verticalLine"></div>
 
 </body>
 <html>

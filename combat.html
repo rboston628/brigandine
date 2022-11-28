@@ -44,8 +44,6 @@
 	<!--iframe src="toc.html" width=300 height=100%></iframe-->
 </div>
 
-<div class="verticalLine"></div>
-
 <div class="main">
 
 <h1>Combat</h1>
@@ -56,8 +54,8 @@ In Brigandine, there is not merely one kind of combat, but four.  They are as fo
 <dl>
 	<dt><a href="#skirmish">Skirmish</a></dt><dd>Used for quick resolutions, or for combat against weaker, unimportant foes.</dd>
 	<dt><a href="#man-to-man">Man-to-Man</a></dt><dd>Used to simulate in detail acts of swordplay and combat.</dd>
-	<dt><a href="#joust">Jousting</a></dt><dd>A specialized system for choosing placement of strikes for single-combat duels</dd>
-	<dt><a href="#fantasy-combat">Fantasy Combat</a></dt><dd>For use against foes which can otherwise not be slain by mortal men</dd>
+	<dt><a href="#joust">Jousting</a></dt><dd>A specialized system for choosing placement of strikes for single-combat duels.</dd>
+	<dt><a href="#fantasy-combat">Fantasy Combat</a></dt><dd>For use against foes which can otherwise not be slain by mortal men.</dd>
 </dl>
 <p>
 Any of these four may appear in the course of an adventure.
@@ -78,10 +76,10 @@ Each system is explained below.
 
 <h3> Armor </h3>
 <dl>
-	<dt> textile </dt><dd> gambeson, padded jack, and boiled leather </dd>
-	<dt> mail </dt><dd> chainmail, scale armor, splint armor, and brigandine </dd>
-	<dt> plate </dt><dd> hardened steel cuirass, greaves, vanbraces, guantlets </dd>
-	<dt> suit of plate</dt><dd> precisely interlocking metal plate armor, covering head to toe </dd>
+	<dt> textile </dt><dd> gambeson, padded jack, and boiled leather. </dd>
+	<dt> mail </dt><dd> chainmail, scale armor, splint armor, and brigandine. </dd>
+	<dt> plate </dt><dd> hardened steel cuirass, greaves, vanbraces, guantlets. </dd>
+	<dt> suit of plate</dt><dd> precisely interlocking metal plate armor, covering head to toe. </dd>
 </dl>
 
 
@@ -115,25 +113,26 @@ Skirmish combat derives from wargame rules for units of several figures fighting
 </table>
 
 <p>
-In Brigandine, a unit could be only a single soldier, but that single soldier may have the fighting strength of multiple men.  The resolution is as follows:
+In Brigandine, a unit representing a single soldier may have the fighting strength of multiple men.  The resolution is as follows:
 </p>
 <ol>
 	<li> Determine the attacker's type and strength:	
 		<ul>
-			<li> attk type --- whether LF,MF,HF,LC,MC,HC </li>
+			<li> attk type --- whether LF, MF, HF, LC, MC, HC </li>
 			<li> &#35;attk --- representing the effective number of men fighting</li>
 		</ul>
 		</li>
 	<li> Determine the defender's type:
 		<ul>
-			<li> def type --- whether LF,MF,HF,LC,MC,HC </li>
-			<li> &#35;def --- representing the effective number of men defending</li>
+			<li> def type --- whether LF, MF, HF, LC, MC, HC </li>
+			<li> &#35;def --- representing the number of hits needed to kill defender</li>
 		</ul>
 		</li>
 	<li> Find cell in table corresponding to attacker/defender types.  This cell lists the number of dice per man that the attacker will roll, followed by the necessary result for a success.</li>
 	</li>
-	<li> The defender now finds his attk type/&#35;</li>
-	<li> Roll the total number of dice indicated, and count each success as a hit.  Subtract these hits from the defender's hit count. The dice rolled are according to the <b>ATK</b> stat, unless otherwise specified.</li>
+	<li> Roll the total number of dice indicated, and count each success as a hit.  Subtract these hits from the defender's &#35;def. The dice rolled are according to the <b>ATK</b> stat, unless otherwise specified.</li>
+	<li> If the defender is reduced to 0 &#35;def, then the defender has been defeated.</li>
+	<li> Continue to next attacker</li>
 </ol>
 
 <h3> Skirmish Combat Table </h3>
@@ -229,7 +228,11 @@ In Brigandine, a unit could be only a single soldier, but that single soldier ma
 	</colgroup> 
 </tbody>
 </table>
-<p> 
+<p>
+The dice rolled are the attacker's <b>ATK</b> dice.  Remember that a dX 
+<a href="basic.html#exploding-dice" target="main"> explodes </a> 
+on a natural roll of X, so that any die is theoretically able to reach arbitrary high values.
+</p>
 
 <h3> Defensive Formation </h3>
 The defender can choose to forego attacks and use the dice instead to 
