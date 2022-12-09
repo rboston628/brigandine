@@ -65,23 +65,44 @@ In general, all combat involves determining the attack and defensive strengths o
 Each system is explained below.
 </p>
 
-<h2 id="arms-armor"> Arms and Armor </h2>
-
-<h3> Arms </h3>
-<dl>
-	<dt> weapon class </dt><dd> broad classifications for weapons: sword, axe, pole arm, etc.</dd>
-	<dt> weapon type </dt><dd> the specific type of weapon: a longsword, a morning star, etc.</dd>
-	<dt> weapon rank </dt><dd> a numerical value relating how the length or speed of weapons compare.</dd>
-</dl>
-
-<h3> Armor </h3>
-<dl>
-	<dt> textile </dt><dd> gambeson, padded jack, and boiled leather. </dd>
-	<dt> mail </dt><dd> chainmail, scale armor, splint armor, and brigandine. </dd>
-	<dt> plate </dt><dd> hardened steel cuirass, greaves, vanbraces, guantlets. </dd>
-	<dt> suit of plate</dt><dd> precisely interlocking metal plate armor, covering head to toe. </dd>
-</dl>
-
+<h2>Combat Order</h2>
+<p>
+Whenever players are within missile range of enemies and it is determined that combat shoud occur, all players will roll <b>IQ</b> to determine the order of initiative.   Each player rolls, not each character.  The referee may split up or combine the enemy forces in initiative however makes sense for managing play.  Initiative moves from largest number, to smallest.  If any tie for initiative occurs, those characters will act simultaneously.
+</p><p>
+Once combat begins, it proceeds as follows:
+</p>
+<ol>
+	<li> All players state what they intend to do over the round: firing missiles, moving, melee, etc.  Artillery fire is declared now, and cannot be changed after it's declared.  Any player may elect now to delay initiative; treat that player's initiative as a "1".  Any communication between characters occurs here.  Any reaction rolls (surprise, morale, etc.) occur here.</li>
+	<li> All combatants move up to half movement, in initiative order. </li>
+	<li> All missile file (arrows/slings) is taken, in initiative order. </li>
+	<li> Melees are resolved. </li>
+	<li> Any artillery fire declared occurs now, in initiative order. </li>
+	<li> Any figure which did not engage in melee may move up to half movement, in initiative order. </li>
+	<li> Any archer who only engaged in missile fire (no movement, artillery, or melee) may fire a second time, in initiative order.</li>
+</ol>
+<p>
+If the above becomes tedious, then consider this condensed combat order:
+</p>
+<ol>
+	<li value="1."> All players state what they intend to do over the round: firing missiles, moving, melee, etc.  Artillery fire is declared now, and cannot be changed after it's declared.  Any player may elect now to delay initiative; treat that player's initiative as a "1".  Any communication between characters occurs here.  Any reaction rolls (surprise, morale, etc.) occur here.</li>
+	<li value="2">Each player acts in initiative order.  Each PC may
+		<ul>
+			<li> move up to half movement <i>then</i> attack,</li>
+			<li> move up to full movement <i>without</i> an attack,</li>
+			<li> <b>or</b> fire a missle <i>then</i> up to full movement</li>
+		</ul>
+	Any declared atillery fire occurs on the artillerist's turn in initiative. </li>
+	<li value="7"> Any archer who only engaged in missile fire (no movement, artillery, or melee) may fire a second time, in initiative order.</li>
+</ol>
+<p>
+Note that in both systems, all combatants resolve the first step, then all combatants resolve the second step, and so on.  In each step, combatants act in initiative order.
+</p><p>
+The second firing round is for archers specifically.  This does not include crossbowmen, artillery, arquebusiers, slingers, or any other shooter with a weapon other than a bow.
+</p><p>
+These steps (whichever chosen) repeat until the combat is over
+</p><p>
+It is advised to re-roll initiative at the start of each round, but this is up to preference.
+</p>
 
 <h2 id="skirmish">Skirmish Combat</h2>
 <p>
@@ -122,7 +143,7 @@ In Brigandine, a unit representing a single soldier may have the fighting streng
 			<li> &#35;attk --- representing the effective number of men fighting</li>
 		</ul>
 		</li>
-	<li> Determine the defender's type:
+	<li> Determine the defender's type and strength:
 		<ul>
 			<li> def type --- whether LF, MF, HF, LC, MC, HC </li>
 			<li> &#35;def --- representing the number of hits needed to kill defender</li>
@@ -130,9 +151,11 @@ In Brigandine, a unit representing a single soldier may have the fighting streng
 		</li>
 	<li> Find cell in table corresponding to attacker/defender types.  This cell lists the number of dice per man that the attacker will roll, followed by the necessary result for a success.</li>
 	</li>
-	<li> Roll the total number of dice indicated, and count each success as a hit.  Subtract these hits from the defender's &#35;def. The dice rolled are according to the <b>ATK</b> stat, unless otherwise specified.</li>
+	<li> Roll the total number of dice indicated, and count each success as a hit.  The dice rolled are according to the <b>ATK</b> stat, unless otherwise specified.</li>
+	<li> The defender may elect to sacrifice his attack by taking defensive action, rolling as many <b>DEF</b> dice as his &#35;def.  Each rolled DEF die can be matched to one of the attacker's rolled ATK die, and if greater will negate it. </li>
+	<li> Subtract remaining ATK dice from the defender's &#35;def.</li>
 	<li> If the defender is reduced to 0 &#35;def, then the defender has been defeated.</li>
-	<li> Continue to next attacker</li>
+	<li> Continue to next attacker.</li>
 </ol>
 
 <h3> Skirmish Combat Table </h3>
@@ -146,85 +169,85 @@ In Brigandine, a unit representing a single soldier may have the fighting streng
 	padding: 15px;">
 <thead>
 	<th> </th>
-	<th colspan=12>Skirmish Combat Table </th>
+	<th colspan=18>Skirmish Combat Table </th>
 </thead>
 <tbody>
 	<tr bgcolor="white">
 		<th style="padding: 15px;"> </th>
-		<th colspan=2 style="padding: 15px;">LF</th>
-		<th colspan=2 style="padding: 15px;">MF</th>
-		<th colspan=2 style="padding: 15px;">HF</th>
-		<th colspan=2 style="padding: 15px;">LC</th>
-		<th colspan=2 style="padding: 15px;">MC</th>
-		<th colspan=2 style="padding: 15px;">HC</th>
+		<th colspan=3 style="padding: 15px;">LF</th>
+		<th colspan=3 style="padding: 15px;">MF</th>
+		<th colspan=3 style="padding: 15px;">HF</th>
+		<th colspan=3 style="padding: 15px;">LC</th>
+		<th colspan=3 style="padding: 15px;">MC</th>
+		<th colspan=3 style="padding: 15px;">HC</th>
 	</tr>
 	<tr bgcolor="#DCDCDC">
 		<th style="padding: 15px;">LF</th>
-		<td>1</td><td>6</td>
-		<td>1</td><td>7</td>
-		<td>1</td><td>8</td>
-		<td>1</td><td>7</td>
-		<td>1</td><td>8</td>
-		<td>1</td><td>9</td>
+		<td>1</td><td>:</td><td>6</td>
+		<td>1</td><td>:</td><td>7</td>
+		<td>1</td><td>:</td><td>8</td>
+		<td>1</td><td>:</td><td>7</td>
+		<td>1</td><td>:</td><td>8</td>
+		<td>1</td><td>:</td><td>9</td>
 	</tr>
 	<tr bgcolor="white">
 		<th style="padding: 15px;">MF</th>
-		<td>1</td><td>5</td>
-		<td>1</td><td>6</td>
-		<td>1</td><td>7</td>
-		<td>1</td><td>7</td>
-		<td>1</td><td>8</td>
-		<td>1</td><td>9</td>
+		<td>1</td><td>:</td><td>5</td>
+		<td>1</td><td>:</td><td>6</td>
+		<td>1</td><td>:</td><td>7</td>
+		<td>1</td><td>:</td><td>7</td>
+		<td>1</td><td>:</td><td>8</td>
+		<td>1</td><td>:</td><td>9</td>
 	</tr>
 	<tr bgcolor="#DCDCDC">
 		<th style="padding: 15px;">HF</th>
-		<td>1</td><td>4</td>
-		<td>1</td><td>5</td>
-		<td>1</td><td>6</td>
-		<td>1</td><td>6</td>
-		<td>1</td><td>7</td>
-		<td>1</td><td>8</td>
+		<td>1</td><td>:</td><td>4</td>
+		<td>1</td><td>:</td><td>5</td>
+		<td>1</td><td>:</td><td>6</td>
+		<td>1</td><td>:</td><td>6</td>
+		<td>1</td><td>:</td><td>7</td>
+		<td>1</td><td>:</td><td>8</td>
 	</tr>
 	<tr bgcolor="white">
 		<th style="padding: 15px;">LC</th>
-		<td>2</td><td>5</td>
-		<td>2</td><td>6</td>
-		<td>1</td><td>6</td>
-		<td>1</td><td>6</td>
-		<td>1</td><td>7</td>
-		<td>1</td><td>8</td>
+		<td>2</td><td>:</td><td>5</td>
+		<td>2</td><td>:</td><td>6</td>
+		<td>1</td><td>:</td><td>6</td>
+		<td>1</td><td>:</td><td>6</td>
+		<td>1</td><td>:</td><td>7</td>
+		<td>1</td><td>:</td><td>8</td>
 	</tr>
 	<tr bgcolor="#DCDCDC">
 		<th style="padding: 15px;">MC</th>
-		<td>2</td><td>4</td>
-		<td>2</td><td>5</td>
-		<td>2</td><td>6</td>
-		<td>1</td><td>5</td>
-		<td>1</td><td>6</td>
-		<td>1</td><td>7</td>
+		<td>2</td><td>:</td><td>4</td>
+		<td>2</td><td>:</td><td>5</td>
+		<td>2</td><td>:</td><td>6</td>
+		<td>1</td><td>:</td><td>5</td>
+		<td>1</td><td>:</td><td>6</td>
+		<td>1</td><td>:</td><td>7</td>
 	</tr>
 	<tr bgcolor="white">
 		<th style="padding: 15px;">HC</th>
-		<td>4</td><td>5</td>
-		<td>3</td><td>5</td>
-		<td>2</td><td>5</td>
-		<td>2</td><td>5</td>
-		<td>1</td><td>5</td>
-		<td>1</td><td>6</td>
+		<td>4</td><td>:</td><td>5</td>
+		<td>3</td><td>:</td><td>5</td>
+		<td>2</td><td>:</td><td>5</td>
+		<td>2</td><td>:</td><td>5</td>
+		<td>1</td><td>:</td><td>5</td>
+		<td>1</td><td>:</td><td>6</td>
 	</tr>
 	<colgroup col span=1 style="border: 1px solid black;">
 	</colgroup>
-	<colgroup col span=2>
+	<colgroup col span=3>
 	</colgroup>
-	<colgroup col span=2 style="border: 1px solid black;">
+	<colgroup col span=3 style="border: 1px solid black;">
 	</colgroup>
-	<colgroup col span=2 style="border: 1px solid black;">
+	<colgroup col span=3 style="border: 1px solid black;">
 	</colgroup> 
-	<colgroup col span=2 style="border: 1px solid black;">
+	<colgroup col span=3 style="border: 1px solid black;">
 	</colgroup>
-	<colgroup col span=2 style="border: 1px solid black;">
+	<colgroup col span=3 style="border: 1px solid black;">
 	</colgroup>
-	<colgroup col span=2 style="border: 1px solid black;">
+	<colgroup col span=3 style="border: 1px solid black;">
 	</colgroup> 
 </tbody>
 </table>
@@ -509,6 +532,18 @@ Man-to-man combat in Brigandine requires rolling on to-hit matrices to determine
 
 
 <h2 id="joust"> Jousting </h2>
+
+<p>Coming Soon!</p>
+
+<p>
+Jousting combat is a form of dueling, fought by a series of direct charges with aimed strikes and carefuly chosen defenses.  Each combatant chooses a place to aim and a defensive stance, which will both determine the outcome when the warriors collide in combat.  There is no dice rolling in jousting.
+</p>
+</p><p>
+It is important the jousters make their decisions in secret before the joust.  This can be as simple as the referee writing down the opponents choices and then the player announcing the PC's choices.
+</p><p>
+Jousting lasts until an opponent is slain or unhorsed.  In a friendly competition, a score may be kept instead of casualties.
+</p>
+
 
 <h2 id="fantasy-combat"> Fantasy Combat </h2>
 
