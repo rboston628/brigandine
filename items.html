@@ -52,25 +52,27 @@
 <p>
 Exactly what gear a soldier has equipped, where it is equipped, and how quickly he could reach it, were crucial to success on the battlefield.  A dagger in your backpack does no good when you drop your sword in a melee.  Supply limitations were often decisive in warfare.
 </p><p>
-To capture this, Brigandine recommends a slot-based system of encumbrance that is carefully tracked.
+To capture this, Brigandine recommends a slot-based system of encumbrance.
 </p><p>
-Weight is not tracked in Brigandine.  If an item is especially heavy, this should be represented by occupying multiple inventory slots, even if the item itself is physically small.
+All items carried must be stored either: Equipped, At-Hand, and Packed.  Each category has a number of slots, and each slot can hold at most 1 item.  Some larger items require more than 1 slot.
 </p><p>
-All gear is in one of three categories: Equipped, At-Hand, and Packed.  What can be put where is limited by a number of slots in each category, where each slot can hold at most 1 item.  Some larger items require more than 1 slot.
+Weight is not tracked in Brigandine.  Very heavy items might occupy multiple inventory slots, even if the heavy item is small.
 </p><p>
 Equipped gear is held in either Dexter (right hand), or Sinister (left hand).  There can be at most one item in each hand.  Some items require both hands.
 </p><p>
-At-Hand gear can be quickly reached, either across the back or around the waist.  This includes sidearms, packs, quivers, shields, belts, purses, or anything else.  These items can be reached during combat by sacrificing all movement.
+At-Hand gear can be quickly reached, either across the back or around the waist.  This includes sidearms, packs, quivers, shields, belts, purses, or anything else.  These items can be reached during 
+<a href="items.html#combat-order"> the first movement phase of combat</a>.
 </p><p>
-Packed items are stored within a container item, such as a backpack, purse, or side satchel.  Retrieving them requires a lot of looking and fumbling, requiring an entire combat turn to be equipped.  Additional turns are needed for each layer of recursion (e.g. an item inside a sack inside of a backpack).
+Items such as backpacks, satchels, or purses can be equipped at-hand, and grant slots to store additional items.
+Retrieving itsm from a bad requires a lot of searching and fumbling, loosing an entire combat turn to dig out.  Additional turns are needed for each layer of recursion (e.g. an item inside a sack inside of a backpack).
 </p><p>
-Depending on your preference, there are two ways for this.
+Depending on your preference, there are two methods for encumbrance.
 </p>
 
-<h3> Option 1: Graphical Slots</h3>
+<h3> Option 1: Graphical Encumbrance</h3>
 
 <p>
-All slots (Dexter/Sinister/Back/Waist) are represented graphically, as areas occupying a certain height and width of square grid spaces on a sheet of graph paper.  Likewise, each item is represented by a block cut out of graph paper, to a certain size and shape.  Items may be placed into any slot where hey fit.  A slot with <b>any</b> item in it, at all, however small, occupies the <b>entire</b> slot.  Items which are too large for a single slot may be fit over multiple slots.  For instance, a two-handed sword, which is 4x4 slots, can be spread over Dexter and Sinister slots when equipped.
+All slots (Dexter/Sinister/Back/Waist) are represented graphically, as areas occupying a certain height and width of square grid spaces on a sheet of graph paper.  Likewise, each item is represented by a graph paper cut-out.  Items may be placed into any slot where they fit.  A slot with <b>any</b> item in it, at all, however small, occupies the <b>entire</b> slot.  Items which are too large for a single slot may be fit over multiple slots.  For instance, a two-handed sword, which is 4x4 squares, can be spread over Dexter and Sinister slots when equipped, and occupies all of both the Dexter and Sinister slots.
 </p>
 <table style="border: 1px solid black">
 <thead>
@@ -81,40 +83,47 @@ All slots (Dexter/Sinister/Back/Waist) are represented graphically, as areas occ
 </thead>
 <tbody>
 <td style="border: 1px solid black">
-<svg height="260" width="300">
-	<text x="70" y="25"> Dexter </text>
-	<rect x="50" y="40" height="200" width="100" style="stroke:black;fill:lightgray;stroke-width:2"/>
-	<line x1="50" y1="090" x2="150" y2="090" style="stroke:gray;stroke-width:1"/>
-	<line x1="50" y1="140" x2="150" y2="140" style="stroke:gray;stroke-width:1"/>
-	<line x1="50" y1="190" x2="150" y2="190" style="stroke:gray;stroke-width:1"/>
-	<line x1="100" y1="40" x2="100" y2="240" style="stroke:gray;stroke-width:1"/>
+<svg height="300" width="300">
+	<text x="70"  y="25"> Dexter   </text>
 	<text x="180" y="25"> Sinister </text>
-	<rect x="150" y="40" height="200" width="100" style="stroke:black;fill:lightgray;stroke-width:2"/>
-	<line x1="150" y1="090" x2="250" y2="090" style="stroke:gray;stroke-width:1"/>
-	<line x1="150" y1="140" x2="250" y2="140" style="stroke:gray;stroke-width:1"/>
-	<line x1="150" y1="190" x2="250" y2="190" style="stroke:gray;stroke-width:1"/>
-	<line x1="200" y1="40" x2="200" y2="240" style="stroke:gray;stroke-width:1"/>
+	<!--the box-->
+	<rect x="50" y="40" height="250" width="200" style="stroke:black;fill:lightgray;stroke-width:2"/>
+	<!--slot divider-->
+	<line x1="150" y1="40"  x2="150" y2="290" style="stroke:black;stroke-width:2"/>
+	<!--horizontal lines-->
+	<line x1="50"  y1="090" x2="250" y2="090" style="stroke:gray;stroke-width:1"/>
+	<line x1="50"  y1="140" x2="250" y2="140" style="stroke:gray;stroke-width:1"/>
+	<line x1="50"  y1="190" x2="250" y2="190" style="stroke:gray;stroke-width:1"/>
+	<line x1="50"  y1="240" x2="250" y2="240" style="stroke:gray;stroke-width:1"/>
+	<!--vertical lines-->
+	<line x1="100" y1="40"  x2="100" y2="290" style="stroke:gray;stroke-width:1"/>
+	<line x1="200" y1="40"  x2="200" y2="290" style="stroke:gray;stroke-width:1"/>
 </svg>
 </td>
 <td style="border: 1px solid black">
 <svg height="400" width="350">
 	<text x="155" y="25"> Back </text>
-	<rect x="75" y="40" height="200" width="200" style="stroke:black;fill:lightgray;stroke-width:2"/>
-	<line x1="175" y1="40" x2="175" y2="240" style="stroke:black;stroke-width:2"/>
-	<line x1="75" y1="090" x2="175" y2="090" style="stroke:gray;stroke-width:1"/>
-	<line x1="75" y1="140" x2="175" y2="140" style="stroke:gray;stroke-width:1"/>
-	<line x1="75" y1="190" x2="175" y2="190" style="stroke:gray;stroke-width:1"/>
-	<line x1="125" y1="40" x2="125" y2="240" style="stroke:gray;stroke-width:1"/>
-	<line x1="175" y1="090" x2="275" y2="090" style="stroke:gray;stroke-width:1"/>
-	<line x1="175" y1="140" x2="275" y2="140" style="stroke:gray;stroke-width:1"/>
-	<line x1="175" y1="190" x2="275" y2="190" style="stroke:gray;stroke-width:1"/>
-	<line x1="225" y1="40" x2="225" y2="240" style="stroke:gray;stroke-width:1"/>
 	<text x="155" y="270"> Waist </text>
+	<!--the back box-->
+	<rect x="075" y="40" height="200" width="200" style="stroke:black;fill:lightgray;stroke-width:2"/>
+	<!--slot divider-->
+	<line x1="175" y1="040" x2="175" y2="240" style="stroke:black;stroke-width:2"/>
+	<!--horizontal lines-->
+	<line x1="075" y1="090" x2="275" y2="090" style="stroke:gray;stroke-width:1"/>
+	<line x1="075" y1="140" x2="275" y2="140" style="stroke:gray;stroke-width:1"/>
+	<line x1="075" y1="190" x2="275" y2="190" style="stroke:gray;stroke-width:1"/>
+	<!--vertical lines-->
+	<line x1="125" y1="040" x2="125" y2="240" style="stroke:gray;stroke-width:1"/>
+	<line x1="225" y1="040" x2="225" y2="240" style="stroke:gray;stroke-width:1"/>
+	<!--the waist box-->
 	<rect x="25" y="280" height="100" width="300" style="stroke:black;fill:lightgray;stroke-width:2"/>
+	<!--slot dividers-->
 	<line x1="125" y1="280" x2="125" y2="380" style="stroke:black;stroke-width:2"/>
 	<line x1="225" y1="280" x2="225" y2="380" style="stroke:black;stroke-width:2"/>
-	<line x1="25" y1="330" x2="325" y2="330" style="stroke:gray;stroke-width:1"/>
-	<line x1="75" y1="280" x2="75" y2="380" style="stroke:gray;stroke-width:1"/>
+	<!--horizontal line-->
+	<line x1="025" y1="330" x2="325" y2="330" style="stroke:gray;stroke-width:1"/>
+	<!--vertical lines-->
+	<line x1="075" y1="280" x2="075" y2="380" style="stroke:gray;stroke-width:1"/>
 	<line x1="175" y1="280" x2="175" y2="380" style="stroke:gray;stroke-width:1"/>
 	<line x1="275" y1="280" x2="275" y2="380" style="stroke:gray;stroke-width:1"/>
 </svg>
@@ -171,15 +180,15 @@ All slots (Dexter/Sinister/Back/Waist) are represented graphically, as areas occ
 </tr>
 <table-->
 <p>
-Each iventory slot is bound by thick black lines, while the thinner gray lines indicate spaces on the graph paper.
+Each iventory slot is bound by thick black lines, while the thinner gray lines indicate spaces of the graph paper.
 </p>
 <p>
-A carried container, such as a backpack, adds additional spaces where items may be stored.  There is no limit on bag-within-bag recursion, as that is automatically handled by bags themselves taking up a lot of space in the inventory.
+A carried bag, such as a backpack or satchel, adds additional spaces where items may be stored.  These bags themselves take up a lot of space in the inventory, so it is not wise to stack them.
 </p>
 
-<h3> Option 2: Simplified Slots </h3>
+<h3> Option 2: Simple Encumbrance </h3>
 <p>
-Use simple slots, and allow the players to write items in the spaces below.  One the lines are filled up, there is no more room to store anything.  A backpack, pouch, purse, satchel, or other container can add more slots.  Recursion of bags-within-bags is limited to 1 bag within another bag.
+A simplified method is to use simple blank lines to represent space in the inventory.  Items are stored in the spaces below.  Once the lines are filled up, there is no more room to store anything.  A backpack, pouch, purse, satchel, or other bag can add more spaces.  Recursion of bags-within-bags is limited to a depth of 1 (eg. you <i>may</i> have 4 purses inside one backpack; you may <i>not</i> have a purse inside a satchel inside a backpack).
 </p>
 <table>
 <tbody>
@@ -233,7 +242,15 @@ Use simple slots, and allow the players to write items in the spaces below.  One
 </tbody>
 </table>
 
-<h3 id="containers"> Containers (bags, satchels, purses, etc.) </h3>
+<h3 id="containers"> Bags (backpacks, satchels, purses, etc.) </h3>
+<p>
+Bags such as backpacks or satchels may be equipped to hold other items.  The best place for these is an "at-hand" space in the inventory.  Smaller bags may be placed inside the backpack or satchel to better organize items.
+</p>
+
+<h3> Dual Wielding </h3>
+<p>
+There's no such thing as dual wielding.  It's a pretty silly idea, really. That's why no one did it.  Characters gain extra attacks based on how powerful the weapon or how fast the weapon, not by swinging two.
+</p>
 
 <h2 id="common"> Common Items </h2>
 <p>
@@ -241,90 +258,226 @@ In the course of an adventure, the players will often need tools to survive.
 </p>
 
 
-<h2 id="arms-armor"> Arms and Armor </h2>
-
-<h3> Arms </h3>
+<h2 id="arms"> Arms </h2>
 <p>
-Medieval combatants carried several arms. A pole arm for charges, a sword for up-close battle, a warhammer for armored foes, a dagger for grappling. They carried these because some weapons were efficient, others weren't, depending on how the enemy was armored.
+Medieval combatants carried several arms. A polearm for charges, a sword for up-close battle, a warhammer for armored foes, a dagger for grappling. They carried these because some weapons were efficient, others weren't, depending on how the enemy was armored.
 </p><p>
-In other RPGs, the choice of battle axe, two-handed sword, or warhammer (which is really a maul...) is almost entirely cosmetic; they all hit the same and do basically the same damage.  In Brigandine, the strategic choice of arms is a crucial part of the gameplay.  Players must carefully gear to have equipped and at-hand to deal with whatever foes they come against.
+In other RPGs, the choice of battle axe, two-handed sword, or "warhammer" (which is really a maul...) is almost entirely cosmetic; they all hit the same and do basically the same damage.  In Brigandine, the strategic choice of arms is a crucial part of the gameplay.  Players must carefully gear to have equipped and at-hand to deal with whatever foes they come against.
 </p><p>
 All arms will have the following propertes:
 </p>
 <dl>
-	<dt> weapon class </dt><dd> broad classifications for weapons: sword, axe, pole arm, etc.</dd>
-	<dt> weapon type </dt><dd> the specific type of weapon: a longsword, a morning star, etc.</dd>
-	<dt> weapon rank </dt><dd> a numerical value relating how the length or speed of wthe weapon.</dd>
+	<dt> weapon rank  </dt><dd> a numerical value relating how the length or speed of the weapon.
+		<table style="border: 1px solid black; padding: 0px">
+		<tbody>
+			<tr bgcolor="white"  ><th>Ranks 1-3</th><td>short sidearms, meant for use in close ranges</td></tr>
+			<tr bgcolor="#DCDCDC"><th>Ranks 4-5</th><td>one-handed weapons, meant as primary arms</td></tr>
+			<tr bgcolor="white"  ><th>Ranks 6-7</th><td>hand-and-half weapons, can only be combined with heater or kite shields.</td></tr>
+			<tr bgcolor="#DCDCDC"><th>Ranks 8-9</th><td>two-handed weapons, prohibit the use of a shield</td></tr>
+			<tr bgcolor="white"  ><th>Rank&nbsp; 10&nbsp;&nbsp;</th><td>two-handed weapons that also function as polearms, prohibit use of a shield</td></tr>
+			<tr bgcolor="#DCDCDC"><th>Ranks 11+</th><td>polearms, at least 8 feet in length, up to 18 feet for pikes</td></tr>
+		</tbody>
+		</table></dd>
+		<dt> weapon type  </dt><dd> the specific type of weapon: a longsword, a morning star, etc.</dd>
+		<dt> weapon class </dt><dd> broad classifications for weapons: sword, axe, polearm, etc.</dd>
+</dl>
+<p>
+Below are descriptions of many of the weapons.
+</p>
+
+
+<h3> Swords </h3>
+<p>The below weapon types are all in class "sword," of varying rank.</p>
+<dl>
+	<dt> dagger (1)</dt>
+	<dd> A short bladed weapon for stabs and cuts. 
+	</dd>
+	<dt> short sword (3)</dt><dd> A short one-handed sword, to be used as a side arm. </dd>
+	<dt> arming sword (5)</dt><dd> A sword to be used as the primary arm, in one hand, often in conjunction with a shield.  In traditional RPGs this is frequently mislabeled a "longsword."</dd>
+	<dt> bastard sword</dt><dd> Also known as a hand-and-a-halfer.  Balanced for swinging one-handed, but with extra length on the grip for an assist with the second hand.  The English are known for this style of swordplay.  Can be used with heater and kite shields, but not with bucklers, tower shields, or bossed shields.</dd>
+	<dt> longsword (8)</dt><dd> Also known as a two-handed sword, as it requires both hands to wield.</dd>
+	<dt> greatsword (10)</dt><dd> Also known amongst Germans as a zweihander, or amongst Scots as a claymore.  A long sword verging on a polearm for its length and associated fighting style.  Stands to at least shoulder height of the wielder.</dd>
+	<dt> bearing sword (13)</dt><dd> A purely ceremonial object, meant to be born before a lord as a display of wealth and power.  Longer and broader even than a greatsword, it is impractical for any but the strongest to attempt to wield one as a weapon.</dd>
 </dl>
 
-<h4> List and description of arms</h4>
+<!--style>
+	tbody tr td div, .vertical {
+		writing-mode: vertical-rl;
+		transform: rotate(180deg);
+	}
+	tbody tr th {
+		vertical-align: bottom;
+		padding: 15px;
+	}
+</style>
+<table style="border: 1px solid black">
+<thead>
+	<tr>
+		<th colspan="4"> Class Sword </th>
+	</tr>
+	<tr>
+		<th></th>
+		<th>rank</th>
+		<th>type</th>
+		<th>description</th>
+	</tr>
+</thead>
+<tbody>
+<tr>
+	<td></td>
+	<th>1</td>
+	<td>dagger</td>
+	<td>A short bladed weapon for stabs and cuts.</td>
+</tr>
+<tr>
+	<td roswpan="2" class=.vertical><div>short</div></td>
+	<th>3</th>
+	<td>short sword</td>
+	<td>A short one-handed sword, to be used as a side arm.</td>
+</tr>
+<tr>
+	<td rowspan="1" class=.vertical><div>one-handed</td>
+	<th>5</th>
+	<td>arming sword</td>
+	<td>A sword to be used as the primary arm, in one hand, often in conjunction with a shield.  In traditional RPGs this is frequently mislabeled a "longsword."</td>
+</tr>
+<tr>
+	<td rowspan="1">hand-and-half</td>
+	<th>6</th>
+	<td>bastard sword</td>
+	<td>Also known as a hand-and-a-halfer.  Balanced for swinging one-handed, but with extra length on the grip for an assist with the second hand.  The English are known for this style of swordplay.  Can be used with heater and kite shields, but not with bucklers, tower shields, or bossed shields.</td>
+</tr>
+<tr>
+	<td rowspan="1">two-handed</td>
+	<th>8</td>
+	<td>longsword</td>
+	<td>Also known as a two-handed sword, as it requires both hands to wield.</td>
+</tr>
+<tr>
+	<td rowspan="1">near-pole</td>
+	<th>10</th>
+	<td>great sword</td>
+	<td>Also known amongst Germans as a zweihander, or amongst Scots as a claymore.  A long sword verging on a polearm for its length and associated fighting style.  Stands to at least shoulder height of the wielder.</td>
+</tr>
+<tr>
+	<td rowspan="1">polearm</td>
+	<th>13</th>
+	<td>bearing sword</td>
+	<td>A purely ceremonial object, meant to be born before a lord as a display of wealth and power.  Longer and broader even than a greatsword, it is impractical for any but the strongest to attempt to wield one as a weapon</td>
+</tr>
+</tbody>
+</table-->
 
-<h5> Swords </h5>
 
-<h5> Axes </h5>
+<h3> Axes </h3>
+<p>The below weapon types are all in class "axe", of varying rank.</p>
+<dl>
+	<dt> hatchet (2)</dt><dd></dd>
+	<dt> archer's axe (5)</dt><dd></dd>
+	<dt> bearded axe </dt><dd> A hand-and-a-half axe.  The long axe blade hangs below the bitting.</dd>
+	<dt> dane axe </dt><dd> A two-handed axe for delivering powerful overhead strikes.</dd>
+	<dt> poll axe (10) </dt><dd> Also known as the medieval can opener.  Stradles the line of axe and polearm.  Has a bladed axe end for chopping, a top spike for piercing, and on the back either a hook or hammer.  Sometimes spelled "pole axe".</dd>
+</dl>
 
-<h5> Bludgeoning </h5>
+<h3> Bludgeoning </h3>
+<p>The below weapon types are all in class "blunt", of varying rank.</p>
+<dl>
+	<dt> club </dt><dd>Any blunt instrument that can be wielded one-handed.</dd>
+	<dt> warhammer </dt> <dd> </dd>
+	<dt> staff </dt><dd>A sturdy stick that can be wieldd in both hands for attacks.</dd>
+	<dt> maul </dt><dd> A large mallet for crushing foes.  In traditional PRGs this is frequently mislabeled a "warhammer."
+	<dt> flail </dt><dd>A polearm developed from a treshing tool.  A heavy metal weight attached to the end of long shaft by means of several lengths of chain.  Not to be confused with the ball-and-chain.</dd>
+</dl>
 
-<h5> Pole arms </h5>
+<h3> Mace </h3>
+<p>The below weapon types are all in class "mace", of varying rank.  This class is very broad and general.  These weapons are not intended for bludgeoning, but for </p>
+<dl>
+	<dt> mace </dt><dd></dd>
+	<dt> ball-and-chain </dt><dd> A spiked ball, attached to a handle by means of a chain.  It is most effective at striking around shields.  Sometimes called a flail, but not to be confused with the polearm variety.</dd>
+</dl>
+
+
+<h3> Polearms </h3>
 <p>
 These weapons all feature a bladed or pointed implement attached to the end of a wooden shaft.  The primary goal of these weapons is reach, hitting the target before the target can close.
 </p>
 <dl>
-	<dt> spear </dt><dd> The most widely used weapon, from pre-history into the middle ages.  It has been so widely used because of its versatility.  It can be used one-handed with a shield, two-handed as a pole arm, and set against cavalry charges.</dd>
-	<dt> sill hook/guisarme/halberd </dt><dd> These three classifications, plus any others, are effectively the same due to a kind of covergenet evolution of arms.  They began as simple farming tools stick to the end of a long stick, and developed in response to battlefield needs.  All three feature a blade for cutting, a front spike for thrusting, a back spike for catching or tripping, set on a haft of about 8-12 ft.  The primary difference in use will be tied to nation and class.  The English prefer bill hooks, those on the Continent prefer guisarms, and richer warriors will prefer a halberd.</dd>
-	<dt> pike </dt><dd> These are long spears over 15 ft in length, which are particularly effective when used in formation againat cavalry.  A pikeman in man-to-man combat is almost guaranteed the first strike before the opponent can close.  Once the opponent closes, the pikeman should consider swapping to a side arm.</dd>
+	<dt> spear </dt><dd> The most widely used weapon, from pre-history into the middle ages.  It has been so widely used because of its versatility.  It can be used one-handed with a shield, two-handed as a polearm, and set against cavalry charges.</dd>
+	<dt> polearm (generic) </dt><dd> Any of a number of weapons that separately converged to a similar form and function.  They began as simple farming tools stick to the end of a long stick, and developed in response to battlefield needs.  All feature a front spike for thrusting, and are double-bitted with two of: a blade for cutting, a back spike for catching or tripping, or a hammer for denting armor.  Set on a haft of about 8-12 ft.  Some examples are
+	<ul>
+		<li> billhook </li>
+		<li> guisarme </li>
+		<li> bec-de-corbin</li>
+		<li> warscythe</li>
+		<li> Lucerne hammer </li>
+		<li> halberd </li>	
+	</ul>
+	Though these have minor differences in form and function, these differences even out on the field.
+	The primary distinction is tied to nation and class.  The English prefer the billhook, Slavs the warscythe, the Swiss the Lucerne hammer.  Elsewhere on the Continent the guisarme and bec-de-corbin dominate.  Noble warriors will prefer a halberd, as a display of wealth.</dd>
+	<dt> pike </dt><dd> These are long spears over 15 ft in length, which are particularly effective when used in formation againat cavalry.  A pikeman in man-to-man combat is all-but guaranteed the first strike before the opponent can close.  Once the opponent closes, the pikeman should consider swapping to a side arm.</dd>
 </dl>
 
-<h5> Missile weapons </h5>
-Any weapon which hits from a distance.  A character using missile weapons does not roll on the usual combat tables, and instead on the missile fire tables.
+<h3> Missile weapons </h3>
+Any projectile weapon which hits from a distance.  A character using missile weapons does not roll on the usual combat tables, and instead on the missile fire tables.
 <dl>
-	<dt> self bow </dt><dd> The simplest kind of bow, made from a single piece of wood.  These are required to be long bows, and so cannot be used ahorse.</dd>
-	<dt> composite bow </dt><dd> Made by layers wood, sinew, and horn which have been laminated together with resin.  Because they can achieve the same draw weight with less length, they can be used from horseback. </dd>
-	<dt> English longbow </dt><dd> The English are renowned for their tradition of longbow.  These bows have very heavy draw weights, and requires constant training to handle.  Not any archer can use an English longbow.</dd>
-	<dt> crossbow </dt><dd></dd>
+	<dt> self bow </dt><dd> The simplest kind of bow, made from a single piece of wood.  These are required to be longbows, and so cannot be used ahorse.</dd>
+	<dt> composite bow </dt><dd> Made by layering wood, sinew, and horn, laminated together with resin.  This combination allows similar draw weight with shorter length (hence sometimes called a "short bow").  This is the only type of bow that may be used on horseback.</dd>
+	<dt> English longbow </dt><dd> The English are renowned for their tradition of longbow.  These bows have very heavy draw weights, and require regular training to handle.  Not any archer can use an English longbow.</dd>
+	<dt> crossbow </dt><dd>The crossbow is the only missile weapon that may be used by any class.  The procedure for loading takes time and care, so that crossbows fire at a slower rate than bows.</dd>
 	<dt> sling </dt><dd> A common weapon of shepherds, used for throwing stones at speeds lethal to lions, bears, or even giants.</dd>
-	<dt> plumbatae </dt> <dd> Also known as wardarts.  Short throwing spears with leaden weights to help the sharp barb punch into armor.  Not for use in public houses.</dd>
+	<dt> plumbatae </dt> <dd> Short throwing spears with leaden weights to help the sharp barb punch into armor.  Also known as wardarts.  Not for use in public houses.</dd>
 </dl>
 
-<h5> Artillery </h5>
-By the late middle ages, gunpowder had started to see use in military applications, through very crude rockets and firearms.  Below are some of the gunpowder weapons that might appear.  These weapons are still extraordinarily fickle, prone to exploding in the users' hands; not every class will know how to use them.
+<h3> Artillery </h3>
+By the late middle ages, gunpowder had started to see use in military applications, as very crude rockets and firearms.  Below are some of the gunpowder weapons that might appear.  These weapons are still extraordinarily fickle, prone to exploding in the user's hands.  They are not yet considered weapons for general use, so that only trained experts may use them.
 <dl>
-	<dt> Arquebus </dt><dd> A matchlock rifle.  A burning length of rope (the match) is touched 
-
+	<dt> arquebus </dt><dd> An early matchlock rifle.  A burning length of rope (the match) is touched against the gunpowder inside the barrel to fire the shot.  An arquebus ignores armor.</dd>
+	<dt> handgonne </dt><dd> A metal socket attached to the end of a pole.  A rocket may be loaded into the socket, its match lit, then the handgonne pointed at a target.</dd>
+	<dt> cheirosiphon </dt><dd> A complicated engine used by the Bysantines, consisting of a naphtha reserve, a hand pump, and a nozzle, capable of spraying fire or noxious compounds.  <b>FC</b>: attack/defend as fire elemental.</dd>
+	<dt> grenade </dt><dd>A cloth-wrapped ceramic pot filled with gunpowder and metal shards.  The outer cloth is lit and the grenade thrown, exploding on impact.  <b>FC</b>: attack as lycanthrope.</dd>
 </dl>
+<p>
+As should be clear from their descriptions, trying to use any of these weapons is generally a disastrous idea, especially for regular troop types.
+</p>
 
-<h3> Armor </h3>
+<h2 id="armor"> Armor </h2>
 <p>
 Medieval combatants took time to strap many peices of weighty metal plating all over their body. Metal gloves, metal greaves, metal shoes, metal skirting, metal breastplates, metal arm covers, all of which needed to be strapped in place by someone assisting. They did this because, covered in armored plating, the knight became nearly impervious to all but specialized weapons or incredibly well-aimed blows.
 </p><p>
 Armor class in Brigandine is literally the classification of the armor.  The armor classes are as follows:
 </p>
 <dl>
-	<dt> textile </dt><dd> including gambeson, padded jack, and boiled leather. </dd>
-	<dt> mail </dt><dd> including chainmail, scale armor, splint armor, and brigandine. </dd>
-	<dt> plate </dt><dd> including hardened steel cuirass, greaves, vanbraces, guantlets. </dd>
-	<dt> suit-of-plate</dt><dd> precisely interlocking metal plate armor, covering head to toe. </dd>
+	<dt> leather </dt><dd> includes gambeson, padded jack, and boiled leather. </dd>
+	<dt> mail </dt><dd> includes chainmail, scale armor, splint armor, and brigandine. </dd>
+	<dt> plate </dt><dd> includes hardened steel cuirass, greaves, vanbraces, guantlets. </dd>
+	<dt> suit-of-plate </dt><dd> precisely interlocking metal plate armor, covering head to toe. </dd>
 </dl>
 <p>
+There is one further classification:
+<dl>
+	<dt> horsed </dt><dd> a mounted soldier, either in light or heavy armor.</dd>
+</dl>
+which is not truly a class of armor, but does impact odds in combat.
+</p><p>
 Note the difference between plate (hardened steel strapped to the body) and suit-of-plate.  Suit-of-plate has been specially tailored to an individual.  This requires a professional armorer and his apprentices working for several weeks.  Suit-of-plate is therefore prohibitively expensive.  Even if found in the course of an adventure, it needs to be fit by an armorer, or else it only counts as mail for armor purposes (the awkward fit makes armor joints stick or refuse to bend properly, so that it is less effective than plate).
 </p><p>
 Any of these armors can be combined with a shield, which will make the defender less likely to suffer a deadly blow.  If the defender is already wearing suit-of-plate, then a shield adds no further benefit.
 </p>
 
-<h4> List and description of armors </h4>
-<p> The numbers needed to hit armor should not be the only things taken into account with armor.  Consider the following properties of each armor type, and work them into any combat that occurs.
+<h3> List and description of armors </h3>
+<p> The numbers needed to hit should not be the only factors taken into account with armor.  Consider the following properties of each armor type, and work them into any combat that occurs.
 </p>
 <dl>
-	<dt> Gambeson </dt><dd>Armor made from thickly packed flax sewn into a linen tunic.  This thick padding dampens blows from bludgeoning weapons. Bladed weapons will be stopped, but can still cut into the fabric, possibly even drawing blood. Piercing weapons such as arrows or spears can be driven through the layers if driven hard enough.  Gambeson is great for keeping warm in cold weather, but miserable to wear in hot climates.  If soaked in water, it provides great defense against fire.  If not soaked in water, it is flammabe.  Gambeson is flexible and quiet.  It does not restrict arm rotation, nor prevent sneaking.</dd>
+	<dt> Gambeson </dt><dd>Armor made from thickly packed flax sewn into a linen tunic.  This thick padding dampens blows from bludgeoning weapons. Bladed weapons will be stopped, but can still cut into the fabric, possibly even drawing blood. Piercing weapons such as arrows or spears can be driven through the layers if thrust hard enough.  Gambeson is great for keeping warm in cold weather, but miserable to wear in hot climates.  If soaked in water, it provides great defense against fire.  If not soaked in water, it is flammable.  Gambeson is flexible and quiet.  It does not restrict arm rotation, nor prevent sneaking.</dd>
 	<dt> Leather </dt><dd>Made of the thick tanned hide of an animal, then shaped by boiling. It is very tough, and can not be easily cut or pierced. The armor absorbs some damage from bludgeoning attacks, but not very much.
 Leather has similar insulatory properties to gambeson. It will be warm in the winter, but not too hot in warm climates. It provides great protection from extreme heat, and is resistive to catching fire.
 Leather armor is flexible and quiet. It does not prevent thieves from sneaking or crawling around.</dd>
-	<dt> Chainmail</dt><dd> More properly, just "mail."  Thousands of tiny rings of steel nitted together into a net that fits as a tunic.  Effectively stops slashing attacks from bladed weapons, but vulnerable to piercing weapons such as arrows landing in the gaps of the tiny rings.  Chainmail is flexible and does not restrict arm rotation, but is too noisy to wear while sneaking.</dd>
+	<dt> Chainmail</dt><dd> More properly, "mail."  Thousands of tiny rings of steel nitted together into a net that fits as a tunic.  Effectively stops slashing attacks from bladed weapons, but vulnerable to piercing weapons such as arrows landing in the gaps of the tiny rings.  Chainmail is flexible and does not restrict arm rotation, but is too noisy to wear while sneaking.</dd>
 	<dt> Scale armor</dt><dd> Similar in relevant ways to mail, but made of hundreds of tiny plates of metal banded together.  Still vulnerable to piercing attacks between the banded plates.  Scale armor is not as flexible as mail, and is too noisy to wear while sneaking.</dd>
 	<dt> Splint armor</dt><dd> Similar in principle to scale armor.  Made of many long, thin bands of metal fastened together or sewn into a garment.  The metal bands will flex with the wearer's motion.  Similar vulnerabilities as scale armor and mail.  It is not as flexible as mail, and is too noisy to wear while sneaking.</dd>
-	<dt> Brigandine</dt><dd> Similar to splint armor.  A leather tunic.  On the inside, many overlapping bands of metal have been riveted together into the tunic.  The rivets seen form the exterior look like small studs, so that this armor is sometimes mistakenly called "studded leather."  Provides full range of arm rotation.  The leather exteior damps the sound of the metal plates, so that it is quiet enough to wear while sneaking</dd>
+	<dt> Brigandine</dt><dd> Similar to splint armor.  A leather tunic.  On the inside, many overlapping bands of metal have been riveted together into the tunic.  The rivets seen form the exterior look like small studs, so that this armor is sometimes mistakenly called "studded leather."  Provides full range of arm rotation.  The leather exterior damps the sound of the metal plates, so that it is quiet enough to wear while sneaking</dd>
 	<dt> Plate </dt><dd> Hardened steel, shaped to fit the human body.  Has to be strapped into place, which is a time-consuming process and may require assistance.  This category includes any manner of cuirass or breast plate, in combination with helmet, metal greaves (leg protection), vanbraces (upper arm protection), and gauntlets (metal articulated gloves).  Any area not covered directly by plate is assumed to have either mail or gambeson protection underneath.</dd>
-	<dt> Suit-of-Plate</dt><dd> </dd>
+	<dt> Suit-of-Plate</dt><dd> A suit of interlocked plate armor.  Underneath, mail or gambeson might be worn for additional padding or protection.  Such armor is usually only donned for tournaments or immediately before a battle.  The moving plates will sound, preventing any form of sneaking, and the rivets at the joints will not allow very precise movement. </dd>
 </dl>
 
 
