@@ -53,13 +53,13 @@ In Brigandine, there is not merely one kind of combat, but four.  They are as fo
 <dl>
 	<dt><a href="#skirmish">Skirmish</a></dt><dd>Used for quick resolutions, or for combat against weaker, unimportant foes.</dd>
 	<dt><a href="#man-to-man">Man-to-Man</a></dt><dd>Used to simulate in detail acts of swordplay and combat.</dd>
-	<dt><a href="#joust">Jousting</a></dt><dd>A specialized system for choosing placement of strikes for single-combat duels.</dd>
+	<dt><a href="#joust">Jousting</a></dt><dd>A specialized system for single-combat duels, especially with powerful champions.</dd>
 	<dt><a href="#fantasy-combat">Fantasy Combat</a></dt><dd>For use against foes which can otherwise not be slain by mortal men.</dd>
 </dl>
 <p>
 Any of these four may appear in the course of an adventure.
 </p><p>
-In general, all combat involves:
+In general, melee combat involves:
 <ul>
 	<li> determining the attack and defensive strengths of each side (e.g. attk 2HF, def 1LC),</li>
 	<li> determining the number of strikes each side may make, </li>
@@ -67,12 +67,14 @@ In general, all combat involves:
 	<li> then resolving successful strikes to determine victory.</li>
 </ul>
 </p><p>
-Each system is explained below.
+In the same melee phase, all four systems of combat might be used, depending on the combatants.
+</p><p>
+Each system is explained below.  The explanations are very detailed, and may make combat seem overly complicated.  Playing through combat will reveal how simple it actually is.
 </p>
 
-<h2 id="combat-order">Combat Order</h2>
+<h2 id="combat-order">Combat Phases</h2>
 <p>
-Whenever it is determined that combat should occur, all players will roll <b>IQ</b> to determine the order of initiative.   Each player rolls, not each character.  The referee may split up or combine the enemy forces in initiative however makes sense.  Higher results move first in intiative.  A tie means the characters act simultaneously in initiative.
+Whenever it is determined that combat should occur, all players will roll <b>IQ</b> to determine initiative order.   Each player rolls, not each character.  The referee may split up or combine the enemy forces in initiative however makes sense.  Higher results move first in intiative.  A tie means the characters act simultaneously in initiative.
 </p><p>
 Combat occurs in rounds, broken up into these phases:
 </p>
@@ -206,6 +208,8 @@ This table does not apply to artillery (arquibus, cannon, etc.).
 <p>
 This is the default melee system of the game, and serves as a baseline for the others.  It is the easiest system, and the fastest to resolve.  This system is best for keeping the game moving during an attack by numerous foes.
 </p><p>
+Simply count up all the dice needed to be rolled by each side, roll them all at once, and resolve all casualties.
+</p><p>
 Skirmish combat derives from wargame rules for units of several figures fighting.  Units of troops are broken into either foot (infantry) or horse (cavalry), and further classified as light, medium, or heavy:
 </p>
 <table style="border: 1px solid black">
@@ -245,15 +249,15 @@ In Brigandine, a unit representing a single soldier may have the fighting streng
 	<li> Determine the defender's type and strength:
 		<ul>
 			<li> <b>def type</b> --- whether LF, MF, HF, LC, MC, HC </li>
-			<li> <b>&#35;def</b> --- representing the number of hits needed to land a strike</li>
+			<li> <b>&#35;def</b> --- representing the number of hits needed to defeat the defender</li>
 		</ul>
 		</li>
 	<li> Find cell in skirmish combat table corresponding to attacker/defender types.  This cell lists the number of dice per man that the attacker will roll, followed by the necessary result for a success.</li>
 	</li>
 	<li> Roll the total number of dice indicated, and count each success as a hit.  The dice rolled are according to the <b>ATK</b> stat, unless otherwise specified.</li>
-	<li> IFF the defender is lower in initiative, then the defender may elect to sacrifice his upcoming attack by taking defensive action, rolling as many <b>DEF</b> dice as his remaining <b>hits</b>.  Each rolled <b>DEF</b> die can be matched to one of the attacker's rolled <b>ATK</b> dice, and if greater will negate it. </li>
-	<li> Subtract remaining <b>ATK</b> dice from the defender's remaining <b>hits</b>.  If applicable, also remove defeated units.</li>
-	<li> If the defender is reduced to <b>0 hits</b>, then the defender has been defeated.</li>
+	<li> IFF the defender is lower in initiative, then the defender may elect to sacrifice his upcoming attack by taking defensive action, rolling as many <b>DEF</b> dice as his remaining <b>&#35;def</b>.  Each rolled <b>DEF</b> die can be matched to one of the attacker's rolled <b>ATK</b> dice, and if greater will negate it. </li>
+	<li> Subtract remaining <b>ATK</b> dice from the defender's remaining <b>&#35;def</b>.  If applicable, also remove defeated units.</li>
+	<li> If the defender is reduced to <b>0 def</b>, then the defender has been defeated.</li>
 	<li> Continue to next attacker.</li>
 </ol>
 
@@ -358,7 +362,7 @@ so that any die is theoretically able to reach arbitrarily high values.
 
 <h3> Defensive Action </h3>
 <p>
-The defender can choose to forego the next attack and use the dice instead to fend off an attacker.  The defender rolls <b>DEF</b> dice equal to his remaining <b>hits</b>, and matches each die against one of the attacker's rolled <b>ATK</b> dice.  If the <b>DEF</b> die is <i>greater</i> than the <b>ATK</b> die, then that <b>ATK</b> die is negated.  Ties do not negate.
+The defender can choose to forego the next attack and use the dice instead to fend off an attacker.  The defender rolls <b>DEF</b> dice equal to his remaining <b>&#35;def</b>, and matches each die against one of the attacker's rolled <b>ATK</b> dice.  If the <b>DEF</b> die is <i>greater</i> than the <b>ATK</b> die, then that <b>ATK</b> die is negated.  Ties do not negate.
 </p><p>
 The defender must be lower in initiative than the attacker (meaning the defender has not yet attacked this round).  The defender then loses any upcoming attacks for this round of combat.
 </p>
@@ -368,35 +372,330 @@ The defender must be lower in initiative than the attacker (meaning the defender
 <p>
 Man-to-man combat in Brigandine aims to capture strategy in choice of arms and armor, the benefits of reach, and the gains and drawbacks of two-handed weapons.  This facet of combat is simulated with the to-hit matrices.
 </p><p>
-This combat system is more involved than skirmish combat.  As it is more dramatic, it is best suited for when the PCs comes into melee with equal or worthy opponents.
+This combat system is more involved than skirmish combat.  As it is more dramatic, it is best suited for when the PCs come into melee with equal or worthy opponents.
 </p><p>
-A bout of man-to-man combat begins when two or more combatants first move into melee range of one another.
-They may move out of melee range, ending the bout.  If the same combatants meet up again, they begin a new bout of man-to-man combat.
+In simplest terms, figure out how many times each combatant can strike, decide whether to parry or not, and roll d6+ATK on the man-to-man table for each strike to determine casualties, going around in order.
 </p><p>
-The resolution of man-to-man combat is as follows:
+The man-to-man combat procedure is as follows:
 </p>
 <ol>
-	<li> Determine the types and &#35;s for each combatants, same as for skirmish combat.</li>
-	<li> Find the corresponding cells in the skirmish combat tables for the attack of each combatant.  The first number in each cell states the number of attacks each combatant has this combat round.</li>
-	<li> For each attack as above, each combatant may make one or more blows, based on comparison of weapon ranks:
+	<li> The referee notes who is in combat and with whom.</li>
+	<li> The melee attack order is determined.  This will follow initiative order, unless one of the combatants has a strategic advantage due to his weapon's speed or reach:
 		<ul>
-			<li> Four to seven ranks lower than opponent's: two blows per attack.</li>
-			<li> Eight or more ranks lower than opponent's: three blows per attack.</li>
-			<li> Otherwise: one blow per attack.</li>
+			<li> On the first round, if one combatant has a weapon 2 or more ranks higher than his opponent's, then that combatant attacks first.</li>
+			<li> On all subsequent rounds, if one combatant has a weapon that is 2 ranks lower than his opponent's, then that combatant attacks first.</li>
 		</ul>
-		This means a combatant could strike his opponent several times in one attack.</li>
-	<li> Each combatant may elect to sacrifice some of their blows to <b>parry</b> attacks (described later).</li>
-	<li> For the first round in the bout, if one combatant has a weapon 2 or more ranks higher than his opponent's, then that combatant attacks first.  Otherwise, they attack in initiative order.</li>
-	<li> On all subsequent rounds in the bout, if one combatants has a weapon that is 2 ranks lower than his opponent's, then that combatant attacks first.  Otherwise, use the same order as the previous round.  (A lower weapon rank could be achieved by switching to a side arm.)</li>
-	<li> All blows are rolled on the </li>
+	Otherwise, use initiative order.
+	</li>
+	<li> The total number of blows for each combatant is determined:
+		<ul>
+			<li> Each combatant has attacks equal to his &#35;attk, which he decides how to split this amongst the enemy combatants.  Each attack could be multiple blows (ie. swings of the weapon), depending on type attk/def and on the weapon wanks.
+			<li> Consult the corresponding skirmish combat tables for the attacker and defender; the first number in each cell states the number of blows per attack.  This is almost always 1, except for C attk types against F def types.
+			<li> Further, there are additional blows based on the attacker's weapon rank:
+			<ul>
+				<li> Eight or more ranks lower than defenders's: two additional blows.</li>
+				<li> Four to seven ranks lower than defenders's: one additional blow.</li>
+				<li> Otherwise: no additional blows.</li>
+			</ul>
+			</li>
+		</ul>
+		Some of these blows may be used to <b>parry</b>, as decribed below.
+	</li>
+	<li> Each blow is rolled as d6+ATK on the man-to-man melee tables below.
+	<li> Combat proceeds in melee attack order order, each combatant making one attack (which may be several individual blows each), and continuing around in attack order until all attacks are exhausted.</li>
 </ol>
-<p>
 
+<h3>Parry</h3>
+<p>
+The defender may have the chance to parry.  In a parry, the defender sacrifices one of his blows in an attack to block the enemy's strike.  The defender rolls his DEF die, and subtracts it from the attacker's ATK die.
+</p><p>
+Parry is subject to the defender's weapon rank:
 </p>
+<ul>
+	<li> If weapon is 2 or more ranks above the attacker's, there is no option to parry.</li>
+	<li> If weapon is 1 above above to 3 ranks below attacker's, the defender may parry to attempt to block the atacker's blow.  If the attacker's blow does not hit, the defender <i>ripostes</i>, recovering the spent blow.</li>
+	<li> If weapon is 4 to 7 ranks below attacker's, the defender may parry.  If the blow would have hit without the parry, the defender's weapon is shattered.</li>
+	<li> If the weapon is 8 or more ranks below the attacker's, the defender may parry.  If the blow would have hit without the parry, the defender's weapon is shattered.  If the blow hits despite the parry, the attacker rolls ATK; the defender suffers that many hits.</li>
+</ul>
+
+<h3>Man-to-man Combat Tables</h3>
 <p>
 Man-to-man combat in Brigandine requires rolling on to-hit matrices to determine a successful strike.  Because keeping track of tables and to-hit matrices can become an obstacle to play, I have provided several options for reducing the number of tables.
 </p>
 
+<h4> Weapon Type Table (full table)</h4>
+<p>
+These tables list out the main weapon types against each armor class.  This will cover the majority of cases.  Weapons not on this table, such as a monster's natural weapons, will usually be assigned an equivalent weapon type on these tables.
+</p>
+
+<style>
+	tbody tr td div, .vertical {
+		writing-mode: vertical-rl;
+		transform: rotate(180deg);
+		vertical-align: bottom;
+	}
+</style>
+
+<table 	style="
+	text-align: center;
+	table-layout: auto; 
+	border: 1px solid black; 
+	border-collapse:collapse; 
+	padding: 15px;">
+<thead>
+	<tr>
+		<th></th>
+		<th colspan=2> weapon </th>
+		<th colspan=6> armor class (+shield) </th>
+	</tr>
+</thead>
+<tbody>
+
+	<tr bgcolor="white">
+		<th style="padding: 15px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th style="padding: 5px;">type</th>
+		<th style="padding: 5px;">rank</th>
+		<th style="padding: 5px;">unarmored</th>
+		<th style="padding: 5px;">leather</th>
+		<th style="padding: 5px;">mail</th>
+		<th style="padding: 5px;">plate</th>
+		<th style="padding: 5px;">suit of plate</th>
+		<th style="padding: 5px;">horse (armored)</th>
+	</tr>
+<tbody style="border: 1px solid black;">
+	<tr bgcolor="#DCDCDC">
+		<td rowspan=8 class=.vertical bgcolor="white"><div>one-handed<div></td>
+		<th>dagger</th><td>1</td>
+		<td>7 (7)</td>
+		<td>8 (8)</td>
+		<td>9 (9)</td>
+		<td>12 (13)</td>
+		<td>17</td>
+		<td>18 (20)</td>
+	</tr>
+	<tr bgcolor="white">
+		<th>hatchet</th><td>2</td>
+		<td>6 (8)</td>
+		<td>7 (8)</td>
+		<td>9 (10)</td>
+		<td>11 (12)</td>
+		<td>16</td>
+		<td>18 (20)</td>
+	</tr>
+	<tr bgcolor="#DCDCDC">
+		<th>club</th><td>3</td>
+		<td>5 (9)</td>
+		<td>6 (9)</td>
+		<td>8 (9)</td>
+		<td>9 (11)</td>
+		<td>-</td>
+		<td>18 (20)</td>
+	</tr>
+	<tr bgcolor="white">
+		<th>short sword</th><td>3</td>
+		<td>5 (9)</td>
+		<td>6 (9)</td>
+		<td>8 (9)</td>
+		<td>13 (13)</td>
+		<td>14</td>
+		<td> -(-)</td>
+	</tr>
+	<tr bgcolor="#DCDCDC">
+		<th>archer's axe</th><td>4</td>
+		<td>8 (10)</td>
+		<td>8 (10)</td>
+		<td>8 (10)</td>
+		<td>9 (11)</td>
+		<td>12</td>
+		<td>18 (20)</td>
+	</tr>
+	<tr bgcolor="white">
+		<th>arming sword</th><td>5</td>
+		<td>8 (10)</td>
+		<td>8 (10)</td>
+		<td>8 (10)</td>
+		<td>9 (11)</td>
+		<td>12</td>
+		<td>18 (20)</td>
+	</tr>
+	<tr bgcolor="#DCDCDC">
+		<th>mace</th><td>6</td>
+		<td>8 (10)</td>
+		<td>8 (10)</td>
+		<td>8 (10)</td>
+		<td>9 (11)</td>
+		<td>12</td>
+		<td>18 (20)</td>
+	</tr>
+	<tr bgcolor="white">
+		<th>Frank axe</th><td>6</td>
+		<td>8 (10)</td>
+		<td>8 (10)</td>
+		<td>8 (10)</td>
+		<td>9 (11)</td>
+		<td>12</td>
+		<td>18 (20)</td>
+	</tr>
+</tbody>
+<tbody style="border: 1px solid black;">
+	<tr bgcolor="white">
+		<td rowspan=3 class=.vertical bgcolor="white"><div>hand-and-half</div></td>
+		<th>bastard sword</th><td>6</td>
+		<td>5 (9)</td>
+		<td>8 (10)</td>
+		<td>11 (11)</td>
+		<td>13 (13)</td>
+		<td>14</td>
+		<td>18 (20)</td>
+	</tr>
+	<tr bgcolor="#DCDCDC">
+		<th>bearded axe</th><td>6</td>
+		<td>7</td>
+		<td>8</td>
+		<td>9</td>
+		<td>10</td>
+		<td>11</td>
+		<td>18 (20)</td>
+	</tr>
+	<tr bgcolor="white">
+		<th>ball-and-chain</th><td>7</td>
+		<td>8</td>
+		<td>8</td>
+		<td>8</td>
+		<td>9</td>
+		<td>10</td>
+		<td>18 (20)</td>
+	</tr>
+</tbody>
+<tbody style="border: 1px solid black;">
+	<tr bgcolor="#DCDCDC">
+		<td rowspan=6 class=.vertical bgcolor="white"><div>two-handed</div></td>
+		<th>longsword</th><td>8</td>
+		<td>8</td>
+		<td>8</td>
+		<td>8</td>
+		<td>9</td>
+		<td>10</td>
+		<td>18 (20)</td>
+	</tr>
+	<tr bgcolor="white">
+		<th>staff</th><td>8</td>
+		<td>8</td>
+		<td>8</td>
+		<td>8</td>
+		<td>9</td>
+		<td>10</td>
+		<td>18 (20)</td>
+	</tr>
+	<tr bgcolor="#DCDCDC">
+		<th>Dane axe</th><td>9</td>
+		<td>8</td>
+		<td>8</td>
+		<td>8</td>
+		<td>9</td>
+		<td>10</td>
+		<td>18 (20)</td>
+	</tr>
+	<tr bgcolor="white">
+		<th>great sword</th><td>10</td>
+		<td>8</td>
+		<td>8</td>
+		<td>8</td>
+		<td>9</td>
+		<td>10</td>
+		<td>18 (20)</td>
+	</tr>
+	<tr bgcolor="#DCDCDC">
+		<th>poll axe</th><td>10</td>
+		<td>8</td>
+		<td>8</td>
+		<td>8</td>
+		<td>9</td>
+		<td>10</td>
+		<td>18 (20)</td>
+	</tr>
+	<tr bgcolor="white">
+		<th>maul</th><td>10</td>
+		<td>8</td>
+		<td>8</td>
+		<td>8</td>
+		<td>9</td>
+		<td>10</td>
+		<td>18 (20)</td>
+	</tr>
+</tbody>
+<tbody style="border: 1px solid black;">
+	<tr bgcolor="#DCDCDC">
+		<td rowspan=5 class=.verticsal bgcolor="white"><div>polearms</div></td>
+		<th>spear</th><td>11</td>
+		<td>8</td>
+		<td>9</td>
+		<td>9</td>
+		<td>10</td>
+		<td>11</td>
+		<td>18 (20)</td>
+	</tr>
+	<tr bgcolor="white">
+		<th>flail</th><td>12</td>
+		<td>8</td>
+		<td>9</td>
+		<td>9</td>
+		<td>10</td>
+		<td>11</td>
+		<td>18 (20)</td>
+	</tr>
+	<tr bgcolor="#DCDCDC">
+		<th>pole arms</th><td>13</td>
+		<td>8</td>
+		<td>8</td>
+		<td>9</td>
+		<td>9</td>
+		<td>10</td>
+		<td>18 (20)</td>
+	</tr>
+	<tr bgcolor="white">
+		<th>mounted lance</th><td>13</td>
+		<td>5</td>
+		<td>5</td>
+		<td>5</td>
+		<td>6</td>
+		<td>7</td>
+		<td>18 (20)</td>
+	</tr>
+	<tr bgcolor="#DCDCDC">
+		<th>pike</th><td>15</td>
+		<td>8</td>
+		<td>8</td>
+		<td>8</td>
+		<td>9</td>
+		<td>10</td>
+		<td>18 (20)</td>
+	</tr>
+	<colgroup col span=1 style="border: 1px solid black;">
+	</colgroup>
+	<colgroup col span=2 style="border: 1px solid black;">
+	</colgroup>
+	<colgroup col span=1 style="border: 1px solid black;">
+	</colgroup>
+	<colgroup col span=1 style="border: 1px solid black;">
+	</colgroup>
+	<colgroup col span=1 style="border: 1px solid black;">
+	</colgroup>
+	<colgroup col span=1 style="border: 1px solid black;">
+	</colgroup>
+	<colgroup col span=1 style="border: 1px solid black;">
+	</colgroup>
+</tbody>
+</table>
+
+
+
+<h4> Weapon Class Table (simplified table)</h4>
+<p>
+Some weapons can not be easily cast to the types above.  These are instead given only a weapon class and a rank.  The rank is used for determining order in combat, and the weapon class for the to-hit numbers on the below table.
+</p><p>
+If desired, all man-to-man combat can use the below table, using the rank and class of each weapon.
+</p>
 
 <table 	style="
 	text-align: center;
@@ -408,7 +707,7 @@ Man-to-man combat in Brigandine requires rolling on to-hit matrices to determine
 <thead>
 	<tr>
 		<th> </th>
-		<th colspan=5> armor class (+shield) </th>
+		<th colspan=6> armor class (+shield) </th>
 	</tr>
 </thead>
 <tbody>
@@ -420,6 +719,7 @@ Man-to-man combat in Brigandine requires rolling on to-hit matrices to determine
 		<th style="padding: 15px;">mail</th>
 		<th style="padding: 15px;">plate</th>
 		<th style="padding: 15px;">suit of plate</th>
+		<th style="padding: 15px;">horse (armored)</th>
 	</tr>
 	<tr bgcolor="#DCDCDC">
 		<th style="padding: 15px;">swords</th>
@@ -427,6 +727,7 @@ Man-to-man combat in Brigandine requires rolling on to-hit matrices to determine
 		<td>8 (10)</td>
 		<td>11 (11)</td>
 		<td>13 (13)</td>
+		<td>15</td>
 		<td>15</td>
 	</tr>
 	<tr bgcolor="white">
@@ -436,14 +737,16 @@ Man-to-man combat in Brigandine requires rolling on to-hit matrices to determine
 		<td>9 (10)</td>
 		<td>10</td>
 		<td>11</td>
+		<td>15</td>
 	</tr>
 	<tr bgcolor="#DCDCDC">
-		<th style="padding: 15px;">clubs</th>
+		<th style="padding: 15px;">blunt</th>
 		<td>5 (9)</td>
 		<td>6 (9)</td>
 		<td>8 (9)</td>
 		<td>13 (13)</td>
 		<td>16</td>
+		<td>15</td>
 	</tr>
 	<tr bgcolor="white">
 		<th style="padding: 15px;">maces</th>
@@ -452,6 +755,7 @@ Man-to-man combat in Brigandine requires rolling on to-hit matrices to determine
 		<td>10</td>
 		<td>10</td>
 		<td>8</td>
+		<td>15</td>
 	</tr>
 	<tr bgcolor="#DCDCDC">
 		<th style="padding: 15px;">pole arms</th>
@@ -460,14 +764,16 @@ Man-to-man combat in Brigandine requires rolling on to-hit matrices to determine
 		<td>8</td>
 		<td>9</td>
 		<td>9</td>
+		<td>15</td>
 	</tr>
 	<tr bgcolor="white">
-		<th style="padding: 15px;">mounted lances</th>
+		<th style="padding: 15px;">mounted lance</th>
 		<td>5</td>
 		<td>5</td>
 		<td>5</td>
 		<td>5</td>
 		<td>6</td>
+		<td>15</td>
 	</tr>
 	<colgroup col span=1 style="border: 1px solid black;">
 	</colgroup>
@@ -486,156 +792,12 @@ Man-to-man combat in Brigandine requires rolling on to-hit matrices to determine
 
 <p> .</p>
 
-<table 	style="
-	text-align: center;
-	table-layout: auto; 
-	border: 1px solid black; 
-	border-collapse:collapse; 
-	padding: 15px;">
-<thead>
-	<tr>
-		<th colspan=2> weapon </th>
-		<th colspan=5> armor class (+shield) </th>
-	</tr>
-</thead>
-<tbody>
-
-	<tr bgcolor="white">
-		<th style="padding: 15px;">type</th>
-		<th style="padding: 15px;">rank</th>
-		<th style="padding: 15px;">unarmored</th>
-		<th style="padding: 15px;">textile</th>
-		<th style="padding: 15px;">mail</th>
-		<th style="padding: 15px;">plate</th>
-		<th style="padding: 15px;">suit of plate</th>
-	</tr>
-<tbody>
-	<tr bgcolor="#DCDCDC">
-		<th>dagger</th>
-		<td> 1 </td>
-		<td>7 (7)</td>
-		<td>8 (8)</td>
-		<td>9 (9)</td>
-		<td>12 (13)</td>
-		<td>14</td>
-	</tr>
-	<tr bgcolor="white">
-		<th>hand axe</th>
-		<td> 2 </td>
-		<td>6 (8)</td>
-		<td>7 (8)</td>
-		<td>9 (10)</td>
-		<td>11 (12)</td>
-		<td>14</td>
-	</tr>
-	<tr bgcolor="#DCDCDC">
-		<th>club</th>
-		<td> 3 </td>
-		<td>5 (9)</td>
-		<td>6 (9)</td>
-		<td>8 (9)</td>
-		<td>13 (13)</td>
-		<td>14</td>
-	</tr>
-	<tr bgcolor="white">
-		<th>mace</th>
-		<td> 5 </td>
-		<td>8 (10)</td>
-		<td>8 (10)</td>
-		<td>8 (10)</td>
-		<td>9 (11)</td>
-		<td>12</td>
-	</tr>
-	<tr bgcolor="#DCDCDC">
-		<th>sword</th>
-		<td> 5 </td>
-		<td>5 (9)</td>
-		<td>8 (10)</td>
-		<td>11 (11)</td>
-		<td>13 (13)</td>
-		<td>14</td>
-	</tr>
-	<tr bgcolor="white">
-		<th>2-handed sword</th>
-		<td>5</td>
-		<td>7</td>
-		<td>8</td>
-		<td>9</td>
-		<td>10</td>
-		<td>11</td>
-	</tr>
-	<tr bgcolor="#DCDCDC">
-		<th>battle axe</th>
-		<td>8</td>
-		<td>8</td>
-		<td>8</td>
-		<td>8</td>
-		<td>9</td>
-		<td>10</td>
-	</tr>
-	<tr bgcolor="white">
-		<th>spear</th>
-		<td>8</td>
-		<td>8</td>
-		<td>9</td>
-		<td>9</td>
-		<td>10</td>
-		<td>11</td>
-	</tr>
-	<tr bgcolor="#DCDCDC">
-		<th>poleaxe</th>
-		<td>7</td>
-		<td>7</td>
-		<td>8</td>
-		<td>8</td>
-		<td>8</td>
-		<td>9</td>
-	</tr>
-	<tr bgcolor="white">
-		<th>pole arms</th>
-		<td>8</td>
-		<td>8</td>
-		<td>8</td>
-		<td>9</td>
-		<td>9</td>
-		<td>10</td>
-	</tr>
-	<tr bgcolor="#DCDCDC">
-		<th>pike</th>
-		<td>8</td>
-		<td>8</td>
-		<td>8</td>
-		<td>8</td>
-		<td>9</td>
-		<td>10</td>
-	</tr>
-	<tr bgcolor="white">
-		<th>mounted lance</th>
-		<td>5</td>
-		<td>5</td>
-		<td>5</td>
-		<td>5</td>
-		<td>6</td>
-		<td>7</td>
-	</tr>
-	<colgroup col span=2 style="border: 1px solid black;">
-	</colgroup>
-	<colgroup col span=1 style="border: 1px solid black;">
-	</colgroup>
-	<colgroup col span=1 style="border: 1px solid black;">
-	</colgroup>
-	<colgroup col span=1 style="border: 1px solid black;">
-	</colgroup>
-	<colgroup col span=1 style="border: 1px solid black;">
-	</colgroup>
-	<colgroup col span=1 style="border: 1px solid black;">
-	</colgroup>
-</tbody>
-</table>
-
-<h3> Initiative </h3>
-
-<h3> Parry </h3>
+<h4>Individual Weapon Tables (detailed tables)</h4>
+<p>
+Some special weapons may have their own special to-hit tables for use in man-to-man combat.
+</p><p>
+These weapons will also have have type, class, and rank, so that one of the more general systems above can be used instead.
+</p>
 
 
 <h2 id="joust"> Jousting </h2>
@@ -643,7 +805,7 @@ Man-to-man combat in Brigandine requires rolling on to-hit matrices to determine
 <p>Coming Soon!</p>
 
 <p>
-Jousting combat is a form of dueling, fought by a series of direct charges with aimed strikes and carefuly chosen defenses.  Each combatant chooses a place to aim and a defensive stance, which will both determine the outcome when the warriors collide in combat.  There is no dice rolling in jousting.
+Jousting combat is a form of dueling, fought by a series of direct charges with aimed strikes and carefuly chosen defenses.  Each combatant chooses a place to aim and a defensive stance, which will both determine the outcome when the warriors collide in combat.  There are no dice rolled in a joust.
 </p><p>
 It is important the jousters make their decisions in secret before the joust.  This can be as simple as the referee writing down the opponents' choices and then the player announcing the PC's choices.
 </p><p>
@@ -661,38 +823,45 @@ Not all humans may engage in Fantasy Combat.  Some particular warriors, after at
 </p><p>
 Some monsters can be fought with either Fantasy Combat or one of the other systems.  Those that can only be fought in Fantasy Combat will have "FC only" listed for their &#35;def.
 </p><p>
-It may happen that PCs will be forced into combat with an "FC only" creature, with no way to destroy it.  Not all is lost.  Though the creature may not be killed, it can still be attacked and driven away.  When the monster takes simultaneous hits equal to its &#35;attk, it will be turned and will leave.  If it is further attacked while leaving, the monster will resume defending itself until the PCs are destroyed.
+It may happen that PCs will be forced into combat with an "FC only" creature, with no way to destroy it.  Not all is lost.  Though the creature may not be killed, it can still be attacked and driven away.  When the monster takes cumulative hits equal to its &#35;attk, it will be turned and will leave.  If it is further attacked while leaving, or cornered, the monster will fight to the death.
 </p>
 
 <style>
-	thead tr th div, .vertical {
+	tbody tr th div, .vertical {
 		writing-mode: vertical-rl;
 		transform: rotate(180deg);
-	}
-	thead tr th {
 		vertical-align: bottom;
 		padding: 15px;
 	}
 </style>
 
-<table style="text-align: center;">
-<thead class=.vertical>
-	<tr bgcolor="white">
-		<th>AC</th>
-		<th class=.vertical><div>hero</div></th>
-		<th class=.vertical><div>wizard</div></th>
-		<th class=.vertical><div>elemental</div></th>
-		<th class=.vertical><div>giant</div></th>
-		<th class=.vertical><div>lycanthrope</div></th>
-		<th class=.vertical><div>troll</div></th>
-		<th class=.vertical><div>balrog</div></th>
-		<th class=.vertical><div>dragon</div></th>
-		<th class=.vertical><div>ent</div></th>
-		<th class=.vertical"><div>roc</div></th>
-		<th class=.vertical><div>wight</div></th>
-		<th class=.vertical><div>wraith</div></th>
+<table style="text-align: center; border: 1px solid black">
+<thead class=.vertical style="border: 1px solid black">
+	<tr>
+		<th colspan="13" style="border: 1px solid black"> Fantasy Combat </th>
 	</tr>
 </thead>
+<tbody class=.vertical>
+	<tr>
+		<th style="border: 1px solid black"></th>
+		<th colspan=12 style="border: 1px solid black">Defender</th>
+	</tr>
+	<tr>
+		<th style="border: 1px solid black; vertical-align: bottom;">Attacker</th>
+		<th class=.vertical style="vertical-align: bottom;"><div>hero</div></th>
+		<th class=.vertical style="vertical-align: bottom;"><div>wizard</div></th>
+		<th class=.vertical style="vertical-align: bottom;"><div>elemental</div></th>
+		<th class=.vertical style="vertical-align: bottom;"><div>beast</div></th>
+		<th class=.vertical style="vertical-align: bottom;"><div>giant</div></th>
+		<th class=.vertical style="vertical-align: bottom;"><div>ogre</div></th>
+		<th class=.vertical style="vertical-align: bottom;"><div>balrog</div></th>
+		<th class=.vertical style="vertical-align: bottom;"><div>dragon</div></th>
+		<th class=.vertical style="vertical-align: bottom;"><div>ent</div></th>
+		<th class=.vertical style="vertical-align: bottom;"><div>roc</div></th>
+		<th class=.vertical style="vertical-align: bottom;"><div>wight</div></th>
+		<th class=.vertical style="vertical-align: bottom;"><div>wraith</div></th>
+	</tr>
+</tbody>
 <tbody>
 	<tr bgcolor="#DCDCDC">
 		<th style="text-align:right">hero</th>
@@ -707,15 +876,15 @@ It may happen that PCs will be forced into combat with an "FC only" creature, wi
 		<td>6</td><td>6</td><td>8</td><td>8</td><td>6</td><td>8</td><td>7</td><td>9</td>
 	</tr>
 	<tr bgcolor="white">
+		<th style="text-align:right">beast</th>
+		<td>4</td><td>4</td><td>6</td><td>6</td><td>3</td><td>4</td><td>6</td><td>7</td>
+	</tr>
+	<tr bgcolor="#DCDCDC">
 		<th style="text-align:right">giant</th>
 		<td>5</td><td>5</td><td>7</td><td>7</td><td>5</td><td>7</td><td>6</td><td>8</td>
 	</tr>
-	<tr bgcolor="#DCDCDC">
-		<th style="text-align:right">lycanthrope</th>
-		<td>4</td><td>4</td><td>6</td><td>6</td><td>3</td><td>4</td><td>6</td><td>7</td>
-	</tr>
 	<tr bgcolor="white">
-		<th style="text-align:right">troll</th>
+		<th style="text-align:right">ogre</th>
 		<td>5</td><td>5</td><td>7</td><td>7</td><td>5</td><td>7</td><td>6</td><td>8</td>
 	</tr>
 	<tr bgcolor="#DCDCDC">
@@ -740,6 +909,14 @@ It may happen that PCs will be forced into combat with an "FC only" creature, wi
 	</tr>
 	<tr bgcolor="white">
 		<th style="text-align:right">wraith</th>
+		<td>5</td><td>5</td><td>7</td><td>7</td><td>5</td><td>7</td><td>6</td><td>8</td>
+	</tr>
+	<tr bgcolor="#DCDCDC">
+		<th style="text-align:right">magic sword</th>
+		<td>5</td><td>5</td><td>7</td><td>7</td><td>5</td><td>7</td><td>6</td><td>8</td>
+	</tr>
+	<tr bgcolor="white">
+		<th style="text-align:right">enchanted arrow</th>
 		<td>5</td><td>5</td><td>7</td><td>7</td><td>5</td><td>7</td><td>6</td><td>8</td>
 	</tr>
 </tbody>
