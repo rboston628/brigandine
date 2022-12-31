@@ -91,8 +91,8 @@ Below are the available character classes, along with their point-buy values.  E
 	<li> <a href="classes/knight.html"> The Knight </a> (10) </li>
 	<li> <a href="classes/infantryman.html">The Infantryman </a> (4) </li>
 	<li> <a href="classes/longbowman.html"> The English Longbowman </a> (8) </li>
-	<li> The Artillerist (5) </li>
-	<li> The Scout (2) </li>
+	<li> The Artillerist (6) </li>
+	<li> The Scout (3) </li>
 	<li> <a href="classes/peasant.html"> Peasant Levie </a> (1 each) </li>
 </ul>
 Character class determines the type of arms and armor that can be used, how effectively the PC can attack, how many blows in combat the player can survive, and any other special abilities.
@@ -154,22 +154,22 @@ If a player so chooses, and <b>before</b> rolling any dice for stats, the player
 As in most other RPGs, the principal stats are not the only relevant numbers for a PC.  There are other factors which determine the ability of a PC, in particular in combat.
 </p>
 <dl>
-	<!--dt> hits </dt>
-	<dd> A measurement of the toughness of the character, in terms of the number of times the character may survive being struck by an otherwise lethal blow.  For normal people, this is always 1.  The value is determined by class and level. </dd-->
 	<dt> type attk </dt>
 	<dd> The classification of the character in melee attacks: LF, MF, HF, LC, MC, HC.  This is necessary for determining how many attacks the character receives.  The value is determined by class and equipped weapon. </dd>
 	<dt> type def </dt>
 	<dd> The classification of the character in melee defense: LF, MF, HF, LC, MC, HC.  This is also necessary for determining how many dice the character's attacker receives.  The value is determined by class and worn armor. </dd>
 	<dt> &#35;attk </dt>
-	<dd> For a powerful warrior who fights with the strength of several men; this characterizes exactly how many men he fights with the strength of.  If 1, fight as single man; if 2, fight as 2 men; etc.  Is necessary for determining how many dice to roll on skirmish combat.  The value is determined by class and level.  Will usually be listed with type attk as, e.g. <b>attk 2LF</b> for types which attack as 2 light foot.</dd>
+	<dd> For a powerful warrior who fights with the strength of several men; this characterizes exactly how many men he fights with the strength of.  If 1, fight as single man; if 2, fight as 2 men; etc.  Is necessary for determining how many dice to roll on skirmish combat.  The value is determined by class and level.  Will be listed with type attk as, e.g. <b>attk 2LF</b> for types which attack as 2 light foot.</dd>
 	<dt> &#35;def </dt>
-	<dd> For a stalwart champion who shrugs off enemy blows to fight on; this characterizes exactly how many times he may be struck before dying.  Decreases with each successful enemy hit ("taking damage").  When the character has taken cumulative hits equal to this number, the character is defeated in combat.  This value is determined by class and level.  Will usually be listed with type def as, e.g. <b>def 1HC</b> for types which defend as 1 heavy cavalry.</dd>
+	<dd> For a stalwart champion who shrugs off enemy blows to fight on; this characterizes exactly how many times he may be struck before dying.  Decreases with each successful enemy hit ("taking damage").  When the character has taken cumulative hits equal to this number, the character is defeated in combat.  The terms "<b>hits</b>" or "hits remaining" may be used interchangeably.  This value is determined by class and level.  Will be listed with type def as, e.g. <b>def 1HC</b> for types which defend as 1 heavy cavalry.</dd>
 	<dt> simul. </dt>
-	<dd> The number of simulataneous hits (i.e. in same combat phase) needed for the character to take damage; if the character takes fewer hits than this, no damage is received; if the character takes this many or more hits, only then does he take damage.  E.g. if the figure has &#35;def of 4 and simul. of 2: if in melee he takes 1 hit, then he does not take damage; if he takes 2 hits, then he is damaged for 2 with 2 def remaining; if he takes 3 hits, then he is damaged for 3 with 1 def remaining; if he takes 4 hits, then he is damageed for 4 and is defeated.  This value is determined by class and level.  When different from 1, will usually be listed togther with type def and &#35;def as, e.g. <b>def 4HF/4</b>, for a type which defends as 4 heavy foot, requiring 4 simulataneous hits to be damaged.</dd>
+	<dd> The number of simulataneous hits (i.e. in same combat phase) needed for the character to take damage; if the character takes fewer hits than this, no damage is received; if the character takes this many or more hits, only then does he take damage.  E.g. if the figure has 4 hits and simul. of 2: if in melee he takes 1 hit, then he does not take damage; if he takes 2 hits, then he is damaged for 2 with 2 hits remaining; if he takes 3 hits, then he is damaged for 3 with 1 hit remaining; if he takes 4 hits, then he is damageed for 4 and is defeated.  This value is determined by class and level.  When different from 1, will be listed togther with type def and &#35;def as, e.g. <b>def 4HF/4</b>, for a type which defends as 4 heavy foot, requiring 4 simulataneous hits to be damaged.</dd>
 	<dt> morale </dt>
 	<dd> The willingness and resolve of the character to fight on in the face of near-certain death.  On a morale check, a character must score over or above this score on 2d6 to continue fighting.  Determined by class and level. </dd>
 	<dt> &#35;firing </dt>
 	<dd> A measurement of how capable the character is at missile fire. </dd>
+	<dt> &half;mv</dt>
+	<dd>How far the character can move in a single movement phase of combat.</dd>
 </dl>
 
 <p>
@@ -233,8 +233,11 @@ These are determined by class, level, and equipment worn:
 Some creatures (such as dragons or balrogs) are exceptionally powerful, and can only be vanquished using the Fantasy Combat rules.  Certain character classes are able to advance onto the Fantasy Combat tables, and if so are given an FC type.  This only occurs for certain classes and at higher levels.
 </p>
 
-
-
 </div>
 </body>
+
+<footer style="margin-left: 300px; text-align: center">
+<p> Copyright <a href="http://www.stinkhousegames.com">Stinkhouse Games</a> 2022, all rights reserved </p>
+</footer>
+
 </html>
