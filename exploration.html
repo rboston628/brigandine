@@ -1,0 +1,233 @@
+<!doctype HTML5>
+<html>
+<head>
+	<title>EXPLORATION AND TIME</title>
+	<style>
+		.sidenav {
+		  height: 100%; /* Full-height: remove this if you want "auto" height */
+		  width: 300px; /* Set the width of the sidebar */
+		  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+		  z-index: 1; /* Stay on top */
+		  top: 0; /* Stay at the top */
+		  left: 0;
+		  /*background-color: #111; /* Black */
+		  overflow-x: hidden; /* Disable horizontal scroll */
+		  padding-top: 20px;
+		}
+		/* The navigation menu links */
+		.sidenav a {
+		  padding: 6px 8px 6px 16px;
+		  text-decoration: none;
+		  font-size: 25px;
+		  color: #818181;
+		  display: block;
+		}
+		/* Style page content */
+		.main {
+		  margin-left: 310px; /* Same as the width of the sidebar */
+		  padding: 0px 10px;
+		}
+		dt { font-weight:bold;}
+		.verticalLine {
+			margin-left: 300px; /* Same as the width of the sidebar */
+			border-left: 4px solid black;
+			position: absolute;
+			height: 100%;
+		}
+	</style>
+</head>
+
+<body>
+<!-- side navigation -->
+<div class="sidenav">
+	<object type="text/html" data="toc.html" width=100% height=100%></object>
+</div>
+
+<div class="main">
+
+<h1>Exploration and Time</h1>
+
+<h2 id="time">Time</h2>
+<p>
+All time in Brigandine is divided into rounds.  
+</p><p>
+During combat, each round corresponds to 1 min of time in the game world.  Each combat round is divided into several phases, which are only a few seconds of time each.  See <a href="combat.html#combat-order">the combat order</a>.
+</p><p>
+After five consecutive rounds of combat, characters will become <i>weary</i>, and will require one combat round of rest to recover.  When weary, both their attack and defense type will drop one category, and they roll a step down in the dice chain.
+</p><p>
+While exploring an area (either tunnels, an aboveground castle, or even an outdoor garden), one exploration round corresponds to 10 minutes of time in the game world.  Unlike combat rounds, there is no fixed schedule for when new exploration rounds begin.  Usually, one exploration round is the time it takes to quietly enter and carefully one standard-sized room (think of your living room).  After the PCs have interacted with one room or terrain feature as much as they can or care to, consider one exploration round to have passed.
+</p><p>
+After five consecutive exploration rounds, characters will become tired and need to rest for one exploration round.  That is, while exploring they need to rest for ten mintues out of every hour. 
+</p><p>
+If combat occurs while exploring, it takes up one full exploration round, with the additional time being used to patch up wounds, clean weapons, fetch arrows, and other such tasks.
+</p><p>
+While traveling overland (through woods, mountains, or other long journeys) one round corresponds to 6 hours of time in the game world.  During this time the PCs are consulting landmarks, listening for approaching footsteps, or checking for good campground.  PCs must consume rations at the end of each overland round, and must spend every fourth overland round resting (i.e. must sleep six hours per day).
+</p><p>
+Rather than traveling, the PCs may use an overland round to explore their location, to fix or replace equipment if possible, or to hunt for game.
+</p><p>
+Carefully tracking exploration rounds is important for keeping tabs on light sources, and on rations.
+</p>
+
+<h2>Rations</h2>
+<p>
+Characters need to consume rations to maintain their strength.  These rations can be food brought for the journey, or come from game caught during the adventure.
+</p>
+
+<h2>Light</h2>
+<p>
+Belowground, inside tunnels, dungeons, or caverns, there is almost no visible light.  It becomes impossible to see without a light source.  The PCs must carry and track light sources, which will gradually burn down over the adventure.
+</p><p>
+If the PCs run out of light sources while belowground, they are trapped.  It is impossible to see, and they can only move stumblingly back the way they came; they move at one tenth their normal exploration speed, and can only feel their way back.  They will not be able to return combat if attacked, and are likely to trip over obstacles or set off traps.
+</p><p>
+PCs deep in a cavern without light are effectively dead.
+</p>
+
+
+<h2 id="skill-table">Skill Check Table</h2>
+<p>
+The below skill check table, adapted from wargame to-hit matrices, can be used for skill checks.  The referee will set a hit rating, and the players roll two dice of the appropriate type (default 2d6).  Checks may be cumulative or simultaneous.
+</p><p>
+The "number own figures" will almost always be 1, unless multiple characters are assisting, the character is particularly skilled, or the character is using a special tool.  The referee may adjust up as deemed appropriate.
+</p><p>
+The number found in the table is the number of "hits" for the skill check, to be compared to its hit-rating.
+</p>
+<table style="
+	text-align: center;
+	table-layout: auto; 
+	border: 1px solid black; 
+	border-collapse:collapse; 
+	padding: 15px;">
+<thead>
+	<tr>
+		<th></th>
+		<th colspan="12">number own figures</th>
+	</tr>
+	<tr>
+		<th style="padding; 15px">roll</th>
+		<td style="padding: 15px">1</td>
+		<td style="padding: 15px">2</td>
+		<td style="padding: 15px">3</td>
+		<td style="padding: 15px">4</td>
+		<td style="padding: 15px">5</td>
+		<td style="padding: 15px">6</td>
+		<td style="padding: 15px">7</td>
+		<td style="padding: 15px">8</td>
+		<td style="padding: 15px">9</td>
+		<td style="padding: 15px">10</td>
+		<td style="padding: 15px">11</td>
+		<td style="padding: 15px">12</td>
+	</tr>
+</thead>
+<tbody style="border: 1px solid black;">
+	<tr>
+		<th>2</th>
+		<td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td>
+		<td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>2</td>
+	</tr>
+</tbody>
+<tbody style="border: 1px solid black;">
+	<tr>
+		<th>3</th>
+		<td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td>
+		<td>1</td><td>1</td><td>2</td><td>2</td><td>2</td><td>2</td>
+	</tr>
+	<tr>
+		<th>4</th>
+		<td>0</td><td>0</td><td>1</td><td>1</td><td>1</td><td>2</td>
+		<td>2</td><td>2</td><td>3</td><td>3</td><td>3</td><td>4</td>
+	</tr>
+	<tr>
+		<th>5</th>
+		<td>0</td><td>1</td><td>2</td><td>2</td><td>2</td><td>3</td>
+		<td>3</td><td>3</td><td>4</td><td>4</td><td>4</td><td>5</td>
+	</tr>
+	<tr>
+		<th>6</th>
+		<td>1</td><td>1</td><td>2</td><td>2</td><td>3</td><td>3</td>
+		<td>4</td><td>4</td><td>5</td><td>5</td><td>6</td><td>6</td>
+	</tr>
+</tbody>
+<tbody>
+	<tr>
+		<th>7</th>
+		<td>1</td><td>1</td><td>2</td><td>3</td><td>3</td><td>4</td>
+		<td>4</td><td>5</td><td>6</td><td>6</td><td>7</td><td>7</td>
+	</tr>
+</tbody>
+<tbody style="border: 1px solid black;">
+	<tr>
+		<th>8</th>
+		<td>1</td><td>2</td><td>2</td><td>3</td><td>4</td><td>5</td>
+		<td>6</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td>
+	</tr>
+	<tr>
+		<th>9</th>
+		<td>1</td><td>3</td><td>4</td><td>5</td><td>6</td><td>8</td>
+		<td>9</td><td>10</td><td>11</td><td>13</td><td>14</td><td>16</td>
+	</tr>
+	<tr>
+		<th>10</th>
+		<td>2</td><td>3</td><td>5</td><td>6</td><td>8</td><td>9</td>
+		<td>11</td><td>13</td><td>14</td><td>16</td><td>18</td><td>19</td>
+	</tr>
+	<tr>
+		<th>11</th>
+		<td>2</td><td>4</td><td>6</td><td>8</td><td>10</td><td>12</td>
+		<td>14</td><td>16</td><td>18</td><td>20</td><td>22</td><td>24</td>
+	</tr>
+</tbody>
+<tbody style="border: 1px solid black">
+	<tr>
+		<th>12</th>
+		<td>3</td><td>5</td><td>8</td><td>10</td><td>13</td><td>15</td>
+		<td>18</td><td>20</td><td>23</td><td>25</td><td>28</td><td>30</td>
+	</tr>
+</tbody>
+<colgroup col span=1 style="border: 1px solid black"></colgroup>
+<colgroup col span=4 style="border: 1px solid black"></colgroup>
+<colgroup col span=1 style="border: 1px solid black"></colgroup>
+<colgroup col span=4 style="border: 1px solid black"></colgroup>
+<colgroup col span=1 style="border: 1px solid black"></colgroup>
+<colgroup col span=2 style="border: 1px solid black"></colgroup>
+</table>
+<p>
+Rolls over 12 are treated as 12.
+</p>
+
+<h4>Example Skill Check</h4>
+<p>
+The PCs need to scale a very tall wall of hewn stone.  The wall affords handholds, but this is not a trivial matter.  The referee could handle this as an opposed roll against a d6.  Or the referee could handle this as a skill check, setting a hit-rating of 2 simultaneous hits to climb the wall.
+</p><p>
+An infantryman attempting to climb is not particularly skilled, so will count as 1 own figure.  He requires a 10 on two dice to succeed.  However, if the infantryman were climbing with a rope, he may receive a bonus to count as 2 or 3 own figures, and require an 8 or a 5 to succeed.
+</p><p>
+A scout could be considered skilled at climbing over walls, so may count as 2 own figures.
+</p><p>
+Several people on top of the wall, using a rope to pull a comrade, may count as many own figures.  One player will be selected to roll for them all.
+</p>
+
+<h2 id="traps">Traps and Locked Doors</h2>
+<p>
+Tunnels and dungeons beneath a castle are normally built to hide things, either prisoners, or treasure, or secrets.  The builders do not want others sneaking in, or out.
+</p><p>
+Most doors will be either locked or stuck, requiring effort form the PCs to open.
+</p><p>
+Forcing a stuck door open is part of the normal exploration, and requires an opposed roll of ATK against a d6 for the door.
+</p><p>
+If a door is locked, either the lock must be picked, or the door broken down.  Either requires special tools, and the attempt takes an exploraton round.
+</p><p>  A wooden door may be chopped down if the PCs have axes.  A solid metal door can be torn open if the PCs have weapons such as warhammers, warpick, or a pollaxe.  Each round attempting to break the door, the players will roll against the skill check table, and must score cumulative hits.
+</p><p>
+Breaking down a door will make a tremendous amount of noise, and alert any enemies in nearby areas of the PCs' precense.  Continuing trying to bash one down, round after round, will attract monsters to the area.
+</p><p>
+Picking a locked door requires lockpicks and someone skilled in their use.  Players roll againt the skill check table and must score simultaneous hits.
+</p><p>
+Many tunnels will be filled with traps.  While any PC can discover a trap if properly searching, and any PC can purposely trigger a trap if he knows how, only someone skilled in the mechanical devices can disable a trap.  Disabling a trap requires rolling against the skill check table, and must score simultaneous hits.  The player will throw these dice behind the referee's screen, so that only the referee can see the result.  On low rolls, the trap may be accidentally triggered, instantly affecting the PC disabling it; or on low rolls nothing may happen at all, so that the PC thinks the trap has been disabled.
+</p>
+
+</div>
+</body>
+
+<footer style="margin-left: 300px; text-align: center">
+<p> Copyright <a href="http://www.stinkhousegames.com">Stinkhouse Games</a> 2022, all rights reserved </p>
+</footer>
+
+</html>
