@@ -1,4 +1,4 @@
-var data = [
+[
   {
     id: "1",
     firstName: "John",
@@ -14,4 +14,4 @@ var data = [
     firstName: "George",
     lastName: "Hansen"
   }
-];
+]
