@@ -1,4 +1,4 @@
-{
+data = {
   "title": "KNIGHT",
   "class-title": "The Knight",
   "point-cost": 10,
@@ -29,19 +29,20 @@
   [
     {
       "feature": "Doughty", 
-      "description": "A knight need not check morale in combat."
+      "description": 
+      "A knight need not check morale in combat."
     },
     {
       "feaure": "Impetuous", 
       "description": 
-      "A knight taunted by a similarly powerful enemy combatant must <b>fail</b> a morale check
-      or else the knight <b>will</b> charge and engage in single combat, regardless of player's wishes."
+      "A knight taunted by a similarly powerful enemy combatant must <b>fail</b> a morale check or else the knight <b>will</b> charge and engage in single combat, regardless of player's wishes."
     },
     {
       "feature": "Fantasy Combat", 
-      "description": "At 4th level, a knight may attack as a Hero on the Fantasy Combat table."
+      "description": 
+      "At 4th level, a knight may attack as a Hero on the Fantasy Combat table."
     }
-  ]
-      
+  ],
+  
   "starting-equipment": "Poll axe, arming sword, shield, chainmail, horse."
-}
+};
