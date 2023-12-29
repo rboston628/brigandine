@@ -16,8 +16,12 @@
 !combat.html
 !referee.html
 !optional_classes.html
+
 !classes/
 !classes/*.html
+
+!classes-json/
+!classes-json/knight.json
 
 !monsters.html
 !sources.html
