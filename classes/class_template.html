@@ -1,16 +1,8 @@
 <!DOCTYPE html5>
 <html>
 <head>
-<!-- 	<script src="./knight.json"></script> -->
 	<script>
 		var data = window.parent.data;
-		var p = window.parent;
-		console.log(p.head);
-// 		var t = p.querySelector("#t");
-// 		console.log(p);
-// 		console.log(t);
-// 		var filepath=window.parent.head;
-// 		console.log(filepath);
 		document.write(`<title>${data.title}</title>`); 
 	</script>
 	<style>
@@ -63,7 +55,7 @@
 	</script>
 </h1>
 <p>
-	<script>document.write(data.class_description)</script>
+	<script>document.write(`${data.description}`)</script>
 </p>
 
 
@@ -105,8 +97,8 @@
 	</tr>
 	<script>
 		var levelInfo = data.level_advancement_table;
-		var keys = Object.keys(levelInfo[0]);
 		for(var i=0; i<levelInfo.length; i++){
+			var keys = Object.keys(levelInfo[i])
 			document.write("<tr>");
 			document.write(`<th>${levelInfo[i].level}</th>`);
 			for(var j=1; j<keys.length; j++){
