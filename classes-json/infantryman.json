@@ -1,0 +1,30 @@
+{
+  "title": "INFANTRYMAN",
+  "class_title": "The Infantryman",
+  "point_cost": 4,
+  "description": "A trained fighter of the king's army.",
+  
+  "half_movement": {"foot": 5, "horse": 9},
+  
+  "level_advancement_table": 
+  [
+    {"level": 1, "attk": 2, "def":   "2", "firing": 1, "morale": 7, "FC": "-" },
+    {"level": 2, "attk": 2, "def": "2/2", "firing": 1, "morale": 7, "FC": "-" },
+    {"level": 3, "attk": 3, "def": "4/2", "firing": 1, "morale": 6, "FC": "-" }
+ ],
+  
+  "combat_type_table": 
+  [
+    {"type": "LF", "weapon_rank": "1-4", "armor_class": "leather"},
+    {"type": "MF", "weapon_rank": "5-8", "armor_class": "mail"},
+    {"type": "HF", "weapon_rank":  "8+", "armor_class": "plate"},
+    {"type": "LC", "weapon_rank": "1-4", "armor_class": "leather, mail"},
+    {"type": "MC", "weapon_rank": "5-8", "armor_class": "plate"},
+    {"type": "HC", "weapon_rank":  "8+", "armor_class": "-"}
+  ],
+
+  "class_features": 
+  [],
+  
+  "starting_equipment": "Chainmail, mace, polearm."
+}

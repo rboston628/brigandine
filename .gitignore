@@ -21,7 +21,7 @@
 !classes/*.html
 
 !classes-json/
-!classes-json/knight.json
+!classes-json/*.json
 
 !monsters.html
 !sources.html
