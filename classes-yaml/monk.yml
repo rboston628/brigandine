@@ -1,0 +1,55 @@
+--- # The Monk
+title: "MONK"
+class-title: "Monk"
+point-cost: 1
+description: >
+  A holyman who has retired from the secular world to seek spiritual contemplation. 
+  A monk is adept at gardening, cooking, and other simple crafts. 
+  Monks are a non-martial class, and have renounced worldly pursuits of violence.
+  </p><p>
+  It is unknown why you have left your abbey to venture into distant lands and dark tunnels.
+  
+half-movement:
+  foot: 4
+  horse: 6
+
+level-advancement-columns: *default-level-advancement-columns
+level-advancement-table:
+  - {level: 1, attk: 1, def: 1, firing: 0, morale: 11, FC: "-"}
+  
+combat-type-table:
+  - {type: LF, weapon-rank: "-", armor-class: "unarmored"}
+  - {type: MF, weapon-rank: "-", armor-class: "-"}
+  - {type: HF, weapon-rank: "-", armor-class: "-"}
+  - {type: LC, weapon-rank: "-", armor-class: "unarmored"}
+  - {type: MC, weapon-rank: "-", armor-class: "-"}
+  - {type: HC, weapon-rank: "-", armor-class: "-"}
+
+class-features:
+  - feature: Blessings
+    description: >
+      A monk is not ordained and cannot say blessings, unlike the priest.
+  - feature: Set apart
+    description: >
+      A monk may not wield any weapon. If he chooses to use a weapon in combat, 
+      he attacks as a peasant. Afterward he must spend an hour in repentance.
+  - feature: Oratio vulgaris
+    description: >
+      Monks can read and speak fluent Latin. This can facilitate easier communication with foreigners.
+  - feature: Liturgia horarum
+    description: >
+      Each night, the monk must sing evensong. 
+      The other soldiers on the adventure are invited to join the monk in prayer.
+      
+starting-equipment: >
+  Crucifix, robe, prayerbook.
+  
+additional: >
+  <h3>And the martial arts?</h3>
+  <p>
+  Perhaps you wanted a <i>xiaolin</i> monk? You do not need to be a special class. 
+  Pick a knight or infantryman and exclusively punch things. 
+  Hands and feet are blunt rank 0, and count as LF.
+  You will likely soon realize why this was choice of armaments was not used on the battlefield.
+  </p>
+...

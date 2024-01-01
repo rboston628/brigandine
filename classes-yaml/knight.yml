@@ -1,0 +1,42 @@
+--- # The Knight
+title: "KNIGHT"
+class-title: "The Knight"
+point-cost: 10
+description: >
+  Representing the peak of military prowess.
+  
+half-movement:
+  foot: 3
+  horse: 6
+  
+level-advancement-table:
+  - {level: 1, attk: 2, def: 2/2, firing: 1, morale: 6, FC: "-" }
+  - {level: 2, attk: 2, def: 4/2, firing: 1, morale: 6, FC: "-" }
+  - {level: 3, attk: 3, def: 4/3, firing: 1, morale: 6, FC: "-" }
+  - {level: 4, attk: 4, def: 4/4, firing: 1, morale: 4, FC: Hero}
+  - {level: 5, attk: 5, de": 5/5, firing: 1, morale: 4, FC: Hero}
+  
+combat-type-table:
+  - {type: LF, weapon-rank: 1-4, armor-class: leather}
+  - {type: MF, weapon-rank: 5-8, armor-class: mail}
+  - {type: HF, weapon-rank:  8+, armor-class: plate}
+  - {type: LC, weapon-rank: 1-4, armor-class: leather}
+  - {type: MC, weapon-rank: 5-8, armor-class: mail}
+  - {type: HC, weapon-rank:  8+, armor-class: plate}
+
+class-features:
+  - feature: Doughty
+    description: >
+      A knight need not check morale in combat.
+  - feaure: Impetuous
+    description: >
+      A knight tauned by a similarly powerful enemy combatant must <b>fail</b> 
+      a morale check or else the knight <b>will</b> charge and engage in 
+      single combat, regardless of the player's wishes.
+  - feature: Fantasy Combat
+    description: >
+      At 4th level, a knight may attack as a Hero on the Fantasy Combat table.
+      
+starting-equipment: >
+  Poll axe, arming sword, shield, chainmail, horse.
+...

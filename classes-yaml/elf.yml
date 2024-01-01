@@ -1,0 +1,90 @@
+--- # Elf/Faerie
+title: "THE ELF"
+class-title: "The Elf"
+point-cost: 12
+description: >
+  Also called fairies, the fair-folk, or in some lands the sidhe.
+  </p><p>
+  Fairies are arrogant and cruel, viewing their immortal lives and 
+  their own power as far more important than any mortal concern.  
+  The lives of humans pass each season like clockwork, and yet the 
+  fairies live on.  Most fairies lack a human's conscience, 
+  showing no remorse for using mortals as pawns in their own schemes.
+  </p><p>
+  Whatever your mortal companions may hope to accomplish in this 
+  quest, your motives are your own, and extend to matters far more 
+  cosmically meaningful than the may-flys could even comprehend with 
+  their tiny, small minds.  You are willing to accompany them, 
+  because your paths are temporarily aligned.
+  </p><p>
+  If you choose to play as an elf, you must play <i>as</i> an elf.  
+  Your motivatons and psyche are not those of a human.
+  
+half-movement:
+  foot: 4
+  horse: 6
+
+level-advancement-columns: ["level", "&#35;attk", "&#35;def", "&#35;firing","morale","FC","known spells"]
+level-advancement-table:
+  - {level: 1, attk: 2, def: "2/2", firing: 3, morale: 10, FC: "-", ks: 3 }
+  - {level: 2, attk: 3, def: "2/2", firing: 3, morale: 9, FC: "Hero", ks: 5 }
+  
+combat-type-table:
+  - {type: LF, weapon-rank: "1-4", armor-class: "leather,mail,plate"}
+  - {type: MF, weapon-rank: "5-8", armor-class: "suite-of-plate"}
+  - {type: HF, weapon-rank: "9+", armor-class: "mithril"}
+  - {type: LC, weapon-rank: "1-4", armor-class: "all armor"}
+  - {type: MC, weapon-rank: "5-8", armor-class: "-"}
+  - {type: HC, weapon-rank: "9+", armor-class: "-"}
+
+class-features:
+  - feature: Eldar time
+    description: >
+      You are hundreds, perhaps thousands of years old. 
+      You remember this country before any mortal man dared cross 
+      into it, and when those who did were little better than beasts 
+      swinging sticks. This entire campaign will be as though a 
+      single passing day in your elven life. 
+      As such, fairies progress more slowly and do not progress in 
+      rank beyond 2nd, as it would take several hundred more years 
+      to reach rank 3.
+  - feaure: Iron aversion
+    description: >
+      Fairies cannot abide the touch of iron.  Normal steel takes 
+      half-again as many kills against a fairy (i.e. 1.5x), and more 
+      primitive iron double kills (2x).  Fairies cannot handle steel 
+      nor iron weapons, nor wear armor made of the same.  
+      They will often prefer alloys of bronze.  
+      Wealthy fairies will opt for mithril.
+  - feature: The god whose name they may not speak
+    description: >
+      Fairies are quite friendly with the heathen gods, and may have 
+      even met some of them.  However, they are repulsed by any sign 
+      of Christianity.  This is a physical reaction, not prejudice.  
+      They may not handle normal European cruciform swords; the only 
+      swords they may use are curved scimitars or falchions.  
+      They will not touch any sort of crucifix, sacramental, nor holy 
+      relic, and they will flinch if a mortal says any holy name.  
+      They will not listen to a priest's prayers, and so are immune 
+      to any positive effects of a clerical blessing.
+  - feature: Magic
+    description: >
+      Elves are not unversed in magic, and not bound to the same rules 
+      as mortals. An elf knows a set number of spells, and 4 daily 
+      spell pips to cast them with. He does not require a 
+      spellbook to remember these, and his use of magic is not 
+      limited by arms or armor.
+  - feature: Ultravision
+    description: >
+      Fairies possess ultravision, being able to see colors that mortals cannot. 
+      During daytime and aboveground this may provide clues, and during nighttime and 
+      aboveground they may see as though it were twilight. Magic artifacts, including 
+      magic swords, are a bright source of ulraviolet light that dim out any natural source, 
+      so ultravision will not work in the presence of such objects.
+  - feature: Fantasy Combat
+    description: >
+      At level 2, Elves may fight in Fantasy Combat as Hero types.
+      
+starting-equipment: >
+  Scalemail, scimitar, amulet.
+...

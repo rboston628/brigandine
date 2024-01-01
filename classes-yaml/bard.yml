@@ -1,0 +1,61 @@
+--- # The Bard
+title: "BARD"
+class_title: "Bard"
+point_cost: 2
+description: >
+  A trained poet-storyteller in the ancient traditions of 
+  composition, recitation, lyricism, and musical play.
+  
+half_movement:
+  foot: 3
+  horse: 6
+  
+level_advancement_table:
+  - {level: 1, attk: 1, def: 1, firing: 0, morale: 11, FC: "-" }
+  - {level: 2, attk: 1, def: 1, firing: 1, morale: 9, FC: "-" }
+  - {level: 3, attk: 1, def: 1, firing: 1, morale: 7, FC: "-" }
+  
+combat_type_table:
+  - {type: LF, weapon_rank: "1-5,11", armor_class: "unarmored"}
+  - {type: MF, weapon_rank: "-", armor_class: "-"}
+  - {type: HF, weapon_rank: "-", armor_class: "-"}
+  - {type: LC, weapon_rank: "-", armor_class: "unarmored"}
+  - {type: MC, weapon_rank: "-", armor_class: "-"}
+  - {type: HC, weapon_rank: "-", armor_class: "-"}
+
+class_features:
+  - feature: Lore
+    description: >
+      The bard is fluent in Latin, French, and the language of his 
+      native country (if his native country is France, he is fluent 
+      in either Italian or Icelandic).  He knows many legends now 
+      only dimly remembered, and can recount ballads of epic heroes 
+      from past times or peoples.  If attempting to use the bard's 
+      lore for information on a quest, make a skill check, and the 
+      higher the roll the more information is gleaned.
+  - feature: Inspiration
+    description: >
+      If the bard sings of warrior saints or ancient heroes of old, 
+      he can inspire those near him in battle.  One friendly unit 
+      hearing this song rolls attacks one-higher in the dice chain.  
+      Multiple bards singing will cancel each other out for no effect.
+  - feature: Performance
+    description: >
+      The bard is a skilled performer, instantly welcome in any 
+      tavern or pub, provided he sing or recite. The bard can easily 
+      gain money by plying his profession.
+  - feature: Playing Hands
+    description: >
+      A bard needs his hands for playing his instrument, and without 
+      them cannot perform his art.  He is entirely unsuited to any 
+      kind of combat, prefering to hang in the back and hope the 
+      others take care of it.  When forced into combat, he fights as 
+      an unarmed peasant.
+  - feature: Vanity
+    description: >
+      As bards tend to be naturally vain, it is not possible to have 
+      more than one bard in an adventuring party.
+      
+starting_equipment: >
+  Lute or pipes, pied tunic, pied hat.
+...

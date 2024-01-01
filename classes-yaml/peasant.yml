@@ -1,0 +1,53 @@
+--- # Peasant Levies
+title: "PEASANTS"
+class-title: "Peasant Levies"
+point-cost: "1 each"
+description: >
+  Represents commoners, often farmers, who have been swept up into the business of war. 
+  Often used as canon fodder in wars, can also be assigned the menial task of 
+  carrying equipment or assisting other characters.
+  
+half-movement:
+  foot: 5
+  horse: 9
+  
+level-advancement-table:
+  - {level: 1, attk: 1, def: 1, firing: 1, morale: 8, FC: "-" }
+  - {level: 2, attk: 1, def: 1, firing: 1, morale: 7, FC: "-" }
+  - {level: 3, attk: 1, def: 1, firing: 1, morale: 6, FC: "-" }
+  - {level: "4</th><td colspan=\"6\" style=\"text-align:center;\"> as level 1 infantryman"}
+  
+combat-type-table:
+  - {type: LF, weapon-rank: 1-6, armor-class: "leather, mail"}
+  - {type: MF, weapon-rank: "-", armor-class: "plate"}
+  - {type: HF, weapon-rank: "-", armor-class: "-"}
+  - {type: LC, weapon-rank: "-", armor-class: "leather, mail, plate"}
+  - {type: MC, weapon-rank: "-", armor-class: "-"}
+  - {type: HC, weapon-rank: "-", armor-class: "-"}
+
+class-features:
+  - feature: Unexceptional
+    description: >
+      Peasants are the common folk, and so each peasant has d6 for all stats. 
+  - feature: Levies
+    description: >
+      Peasants only act as a unit. 
+      They always attack with the skirmish combat rules, even if all other player forces 
+      are engaged in man-to-man melee, and even if there is only a single peasant in the levie. 
+      All peasants controlled by a player must form up within at most three separate units. 
+      All peasants in one unit have the same core stats. 
+      If there is ambiguity about unit core stats, use 
+      <a href="https://www.ncbi.nlm.nih.gov/books/NBK540990/">the mode</a>.
+  - feaure: Reluctant soldiers
+    description: >
+      Each unit of peasants in the player's control must pass a morale check at the beginning 
+      of each round of combat. If failed, that unit does not act that round. 
+      If attacked, the unit will fall back or flee.
+  - feature: Advancement
+    description: >
+      Those peasants who survive on the battlefield beyond 3rd level may be appointed as 
+      1st level infantrymen.  This promoted peasant still has a point-buy of 1.
+
+starting-equipment: >
+  Gambeson, polearm (either billhook or guisarm), a hunting knife (as dagger).
+...

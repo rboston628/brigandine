@@ -1,0 +1,115 @@
+--- # The Priest
+title: "PRIEST"
+class-title: "The Priest"
+point-cost: 6
+description: >
+  A holyman, seeking spiritual answers or ancient holy artifacts.
+  
+half-movement:
+  foot: 4
+  horse: 6
+
+level-advancement-columns: ["level", "&#35;attk", "&#35;def", "&#35;firing","morale","FC","daily blessings"]
+level-advancement-table:
+  - {level: 1, attk: 1, def: 1, firing: 0, morale: 6, FC: "-", ks: 1}
+  - {level: 2, attk: 1, def: 1, firing: 0, morale: 5, FC: "-", ks: 3}
+  - {level: 3, attk: 1, def: 1, firing: 0, morale: 4, FC: "-", ks: 5}
+  
+combat-type-table:
+  - {type: LF, weapon-rank: "-", armor-class: all}
+  - {type: MF, weapon-rank: "-", armor-class: "-"}
+  - {type: HF, weapon-rank: "-", armor-class: "-"}
+  - {type: LC, weapon-rank: "-", armor-class: all}
+  - {type: MC, weapon-rank: "-", armor-class: "-"}
+  - {type: HC, weapon-rank: "-", armor-class: "-"}
+
+class-features:
+  - feature: Blessings
+    description: >
+      A priest is able to say blessings. This is limited by his number of daily blessings. See below.
+  - feaure: Exorcism
+    description: >
+      A priest may use his prayers and crucifix to attack certain creatues in Fantasy Combat 
+      as though armed with a magic sword:
+      <ul>
+        <li>lycanthropes (needs 9)</li>
+        <li>demons (needs 12)</li>
+        <li>wights (needs 6)</li>
+        <li>wraiths (needs 8)</li>
+      </ul>
+      Against non-FC undead monsters, the priest rolls 2d6 on the skill check table, 
+      using his level as the number of own figures, and can kill that many creatures. 
+      Certain holy relics may grant more own figures. The priest requires the formulae written 
+      in his prayerbook for this action.
+  - feature: Set apart
+    description: >
+      A priest may not wield any weapon except the weapons of the spirit: a crucifix, 
+      his prayerbook, and the sacraments. If he chooses to use a weapon in combat, he attacks as a peasant. 
+      He loses all daily blessings. Afterward he must spend an hour in repentance.
+  - feature: Oratio vulgaris
+    description: >
+      Priests can read and speak fluent Latin. This can facilitate easier communication with foreigners.
+  - feature: Liturgia horarum
+    description: >
+      Each night, the priest must sing evensong. If the priest misses these prayers, 
+      he may use no blessings the next day. 
+      The other soldiers on the adventure are expected to join the priest in prayer. 
+      Repeated refusal by soldiers may cause blessings to fail. 
+      The words of evensong are engraved on the priest's heart; they may be recalled without the prayerbook.
+      
+starting-equipment: >
+  Crucifix, robe, pyx box, prayer book.
+  
+additional: >
+  <h2>Blessings</h2>
+  <p>
+  A priest is able to say any of the below blessings, subject to his daily limit.
+  </p>
+  <dl>
+    <dt>Eucharist</dt>
+    <dd>
+      The priest can consecrate holy eucharist.  When administered to the soldiers, 
+      it removes any curse or negative spiritual effects.  When touched to certain wicked abominations, 
+      it can attack FC-only monsters as though in Fantasy Combat (see Exorcism).  
+      This must be stored in a pyx box.  If mishandled, the priest loses this abiity.
+    </dd>
+    <dt>Chrismation</dt>
+    <dd>
+      The priest may annoint another character before combat.  During the next combat, this soldier 
+      will require simulataneous hits equal to his &#35;def to take any damage.
+    </dd>
+    <dt>Extreme Unction</dt>
+    <dd>
+      The priest may touch one friendly character to restore one hit to that character's &#35;def.  
+      This may be done to revive a character dead less than one exploration turn, unless that 
+      character's body was destroyed (suffered more hits than &#35;def).
+    </dd>
+    <dt>Visions</dt>
+    <dd>
+      The priest will retreat into prayerful meditation to seek an answer to a question.  
+      For each hour spent in prayer, he rolls as that many number own figures on the skill check table.  
+      Depending on how high the result, he receives a spiritual answer.
+    </dd>
+    <dt>Consecrate</dt>
+    <dd>
+      The priest creates a ring of protection.  Evil creatures will not enter this ring.  
+      The ring remains until the priest leaves its bounds, at which point the power dissipates.
+    </dd>
+  </dl>
+
+  <h2> Adapting to Other Deities </h2>
+  <p>
+  Because the setting is assumed to be Continental Europe in the Middle Ages, 
+  the priest is assumed to be Christian (either Roman or Byzantine, 
+  or by stretching the time period Celtic/Anglican or Lutheran).  
+  If it makes sense within the context of the adventure, the priest may alternately be 
+  an Islamic imam, a Jewish rabbi, or even a Zoroastrian magus, mutatis mutandis.
+  </p><p>
+  If the priest joins the party from a fantasy otherworld, this may be any other religion appropriate 
+  to that world.
+  </p><p>
+  This class is written with monotheism in mind.  The priests of heathen gods are more warlike, 
+  but their deities are also self-interested and amoral.  Their blessings will be only minor kick-backs 
+  in thanks for larger sacrifices.  It is recommended heathen priests be handled more like wizards or elves.
+  </p>
+...

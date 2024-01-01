@@ -1,0 +1,42 @@
+--- # The Artillerist
+title: "ARTILLERIST"
+class_title: "The Artillerist"
+point_cost: 10
+description: >
+  An expert in the use of gunpowder weaponry.
+  
+half_movement:
+  foot: 3
+  horse: 6
+  
+level_advancement_table:
+  - {level: 1, attk: 1, def:   2, firing: 1, morale: 8, FC: "-" }
+  - {level: 2, attk: 1, def:   2, firing: 1, morale: 8, FC: "-" }
+  - {level: 3, attk: 1, def:   3, firing: 3, morale: 7, FC: "-" }
+  - {level: 4, attk: 1, def: 4/2, firing: 3, morale: 4, FC: "-"}
+  
+combat_type_table:
+  - {type: LF, weapon_rank: 1-6, armor_class: "leather, mail"}
+  - {type: MF, weapon_rank: "-", armor_class: "plate"}
+  - {type: HF, weapon_rank: "-", armor_class: "-"}
+  - {type: LC, weapon_rank: "-", armor_class: "leather, mail, plate"}
+  - {type: MC, weapon_rank: "-", armor_class: "-"}
+  - {type: HC, weapon_rank: "-", armor_class: "-"}
+
+class_features:
+  - feature: Artillery
+    description: >
+      The artillerist is assumed proficient at any artillery weapons 
+      encountered.
+  - feature: Hearing loss
+    description: >
+      The artillerist will automatically fail any dice roll requiring 
+      careful listening.
+  - feature: Fantasy Combat
+    description: >
+      Some artillery can allow the artillerist to attack on the 
+      Fantasy Combat table.
+      
+starting_equipment: >
+  Arquebus, gunpowder, shot, two grenades.
+...

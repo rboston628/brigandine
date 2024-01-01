@@ -1,0 +1,30 @@
+--- # The Infantryman
+title: "INFANTRYMAN"
+class-title: "The Infantryman"
+point-cost: 4
+description: >
+  A trained fighter of the king's army.
+  
+half-movement:
+  foot: 5
+  horse: 9
+  
+level-advancement-table:
+  - {level: 1, attk: 2, def:   2, firing: 1, morale: 7, FC: "-" }
+  - {level: 2, attk: 2, def: 2/2, firing: 1, morale: 7, FC: "-" }
+  - {level: 3, attk: 3, def: 4/2, firing: 1, morale: 6, FC: "-" }
+  
+combat-type-table:
+  - {type: LF, weapon-rank: 1-4, armor-class: "leather"}
+  - {type: MF, weapon-rank: 5-8, armor-class: "mail"}
+  - {type: HF, weapon-rank:  8+, armor-class: "plate"}
+  - {type: LC, weapon-rank: 1-4, armor-class: "leather, mail"}
+  - {type: MC, weapon-rank: 5-8, armor-class: "plate"}
+  - {type: HC, weapon-rank:  8+, armor-class: "-"}
+
+class-features: 
+  - null
+      
+starting-equipment: >
+  Chainmail, mace, polearm.
+...

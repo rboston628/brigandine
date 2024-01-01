@@ -1,0 +1,56 @@
+--- # Doggo
+title: "GOOD BOY"
+class_title: "Dog"
+point_cost: 1
+description: >
+  A loyal companion, which will fight deathlessly for its master.  
+  Its powerful nose can detect even trace smells.
+  
+half_movement:
+  foot: 12
+  horse: "-"
+  
+level_advancement_table:
+  - {level: 1, attk: 1, def: 1, firing: "-", morale: 4, FC: "-" }
+  - {level: 2, attk: 1, def: 2, firing: "-", morale: 3, FC: "-" }
+  
+combat_type_table:
+  - {type: LF, weapon_rank: "-", armor_class: "natural"}
+  - {type: MF, weapon_rank: "natural", armor_class: "-"}
+  - {type: HF, weapon_rank: "-", armor_class: "-"}
+  - {type: LC, weapon_rank: "-", armor_class: "-"}
+  - {type: MC, weapon_rank: "-", armor_class: "-"}
+  - {type: HC, weapon_rank: "-", armor_class: "-"}
+
+class_features:
+  - feature: Good boy
+    description: >
+      Dogs cannot speak any language.  They can understand at most 
+      four commands in human language, to be pre-decided by the 
+      player and writen down on the dog's character sheet.  
+      Dogs can communicate only by barks, growls, and whines.
+  - feature: Keen senses
+    description: >
+      Dogs have incredible ability to detect scents, and to hear 
+      faint sounds.  If it is in their list of known commands, they 
+      can be instructed to follow a scent, or to respond to a signal 
+      whistle.
+  - feature: No opposable thumbs
+    description: >
+      Dogs are incapable of using any weapon or device (no item slots).  
+      They will refuse to wear any armor.  At best, a dog's master can 
+      tie one special satchel to it for carrying supplies.
+  - feature: Natural arms/armor
+    description: >
+      A dog's vicious attack with its bite counts as MF, and is 
+      treated as rank 1 sword (as dagger).  A dog's hide counts as 
+      LF (leather).  A dog cannot be otherwise armed.
+  - feature: Pack
+    description: >
+      A player can have <b>at most 2</b> dogs before they become 
+      wild and out of control.
+      
+starting_equipment: >
+  Spiked wolf collar (free defensive action/parry against attacks 
+  from beasts).
+...

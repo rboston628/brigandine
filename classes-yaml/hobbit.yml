@@ -1,0 +1,68 @@
+--- # The Hobbit
+title: "HOBBIT"
+class-title: "Hobbit"
+point-cost: 2
+description: >
+  The wee-folk of the far-away hill countries, who aspire to a 
+  simple life set by pleasant evenings of supper with friends, wads 
+  of fine pipe tobacco, a pint at the pub, and a full breakfast in 
+  the morning.
+  
+half-movement:
+  foot: 4
+  horse: 6
+  
+  
+level-advancement-columns: ["level", "&#35;attk", "&#35;def", "&#35;firing(stone)","morale","FC"]
+level-advancement-table:
+  - {level: 1, attk: 1, def: 1, firing: 1(3), morale: 10, FC: "-" }
+  - {level: 2, attk: 2, def: 2, firing: 2(4), morale:  9, FC: "-" }
+  - {level: 3, attk: 2, def: 3, firing: 3(5), morale:  9, FC: "-" }
+  
+combat-type-table:
+  - {type: LF, weapon-rank: 1-4, armor-class: "leather, mail, plate"}
+  - {type: MF, weapon-rank: 5-8, armor-class: suit-of-plate}
+  - {type: HF, weapon-rank: "-", armor-class: mithril}
+  - {type: LC, weapon-rank: 1-4, armor-class: all}
+  - {type: MC, weapon-rank: 5-8, armor-class: "-"}
+  - {type: HC, weapon-rank: "-", armor-class: "-"}
+
+class-features: 
+  - feature: Luck o' the wee-folk
+    description: >
+      All hobbits have an additional stat, LUCK, rolled 4d2 as the 
+      others. The hobbit may re-roll any natural 1 on any roll, using 
+      the LUCK die instead. Use of this ability requires keeping his 
+      luck up, which means adhering to superstitions.
+  - feature: Thrown stone
+    description: >
+      Hobbits are most effective at throwing stones (by hand or with 
+      a sling), and so with these weapons count as additional 
+      #firing, as above (stone).
+  - feature: Tricksy
+    description: >
+      Hobbits are small, and oft-overlooked. They are easily able to 
+      hide from danger, or to sneak up on big-folk. While sneaking, 
+      they may attempt to pick pockets, or to backstab. 
+      To sneak requires an opposed LUCK roll against target's IQ.
+  - feature: Pony riding
+    description: >
+      Hobbits can only sit ahorse on ponies or smaller. 
+      They may be carried on a horse, but cannot effectively attack 
+      this way.
+  - feature: Encumbrance
+    description: >
+      Hobbits cannot carry as much as the big-folk, so have a reduced 
+      inventory. They must also use some weapons two-handed (rank 5+) 
+      which would otherwise be one-handed. Weapons which big-folk need 
+      two hands for (8+) cannot be used at all. 
+      Armor which is crafted for taller races will not fit a hobbit.
+  - feature: Fantasy Combat
+    description: >
+      Despite their loyal hearts, hobbits are no great warriors, nor 
+      remembered for their deeds in battle. 
+      Hobbits have no natural FC, though may use magic swords.
+
+starting-equipment: >
+  Pocket handkerchief, walking stick (staff), dagger.
+...

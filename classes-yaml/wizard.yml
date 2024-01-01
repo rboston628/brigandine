@@ -1,0 +1,69 @@
+--- # The Wizard
+title: "WIZARD"
+class-title: "The Wizard"
+point-cost: 12
+description: >
+  Learned in forbidden lore, capable of tapping arcane powers.
+  
+half-movement:
+  foot: 3
+  horse: 6
+
+level-advancement-columns: ["level", "&#35;attk", "&#35;def", "&#35;firing" ,"morale", "FC", "spell die"]
+level-advancement-table:
+  - {level: 1, attk: 1, def: 1, firing: 1, morale: 8, FC: "-", ks: d3}
+  - {level: 2, attk: 1, def: 1, firing: 1, morale: 7, FC: "-", ks: d4}
+  - {level: 3, attk: 1, def: 1, firing: 1, morale: 6, FC: "-", ks: d5}
+  - {level: 4, attk: 1, def: 1, firing: 1, morale: 6, FC: "Wizard", ks: d6}
+  - {level: 5, attk: 1, def: 1, firing: 1, morale: 6, FC: "Wizard", ks: d7}
+  
+combat-type-table:
+  - {type: LF, weapon-rank: "-", armor-class: all}
+  - {type: MF, weapon-rank: "-", armor-class: "-"}
+  - {type: HF, weapon-rank: "-", armor-class: "-"}
+  - {type: LC, weapon-rank: "-", armor-class: all}
+  - {type: MC, weapon-rank: "-", armor-class: "-"}
+  - {type: HC, weapon-rank: "-", armor-class: "-"}
+
+class-features:
+  - feature: Magic
+    description: >
+      A mage is able to cast terrible spells.  
+      The wizard begins knowing three spells, and there is no limit to the number 
+      of spells he may learn over the course of the adventure.  All known spells 
+      must be recorded in the grimoire, which the wizard must consult each night 
+      in order to cast spells the next day.  
+      Loss of the grimoire means the loss of all known spells.
+  - feature: Spell Die
+    description: >
+      The wizard's magical power is represented by his spell die.  The wizard first 
+      declares the spell he wishes to cast, then rolls the die. 
+      The spell succeeds if the die shows sufficient pips for the spell.  
+      On a natural 1, the spell die drops -1d in the dice chain, even if the spell 
+      succeeds.  
+      Even if the spell is disrupted before the roll, the wizard <b>must</b>
+      roll the spell die after the casting has been declared.  
+      The spell die resets after a full night's rest and an hour 
+      spent in quiet study.
+  - feature: Arcane strength
+    description: >
+      Wizards are masters of arcane knowledge, who have spent long lives in 
+      perplexing study.  As such they are weak, feeble, and often quite elderly. 
+      They are considered untrained in all arms and armor, and quite useless 
+      at any physical exertion.
+  - feature: Weapon restrictions
+    description: >
+      The arcane forces of magic interact unpredictably with metal on the 
+      wizard's person.  
+      A wizard may not cast spells if holding a weapon, nor while wearing armor.  
+      Even armor such as leather or gambeson tends to insulate and constrain the 
+      release of power, causing spell failure.  As such, a wizard may wear only 
+      loose cloth robes while casting spells.
+  - feature: Fantasy Combat
+    description: >
+      Beginning at 4th rank, a Wizard can attack on the Fantasy Combat tables 
+      as a Wizard.
+
+starting-equipment: >
+  Robe and wizard hat, staff, grimoire.
+...
