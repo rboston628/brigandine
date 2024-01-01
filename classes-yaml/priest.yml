@@ -15,7 +15,7 @@ level_advancement_table:
   - {level: 2, attk: 1, def: 1, firing: 0, morale: 5, FC: "-", ks: 3}
   - {level: 3, attk: 1, def: 1, firing: 0, morale: 4, FC: "-", ks: 5}
   
-combat-type-table:
+combat_type_table:
   - {type: LF, weapon_rank: "-", armor_class: all}
   - {type: MF, weapon_rank: "-", armor_class: "-"}
   - {type: HF, weapon_rank: "-", armor_class: "-"}
