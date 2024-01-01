@@ -13,7 +13,6 @@ half_movement:
   foot: 4
   horse: 6
 
-level_advancement_columns: *default-level-advancement-columns
 level_advancement_table:
   - {level: 1, attk: 1, def: 1, firing: 0, morale: 11, FC: "-"}
   
@@ -50,6 +49,8 @@ additional: >
   Perhaps you wanted a <i>xiaolin</i> monk? You do not need to be a special class. 
   Pick a knight or infantryman and exclusively punch things. 
   Hands and feet are blunt rank 0, and count as LF.
-  You will likely soon realize why this was choice of armaments was not used on the battlefield.
+  </p><p>
+  You will likely soon realize why this choice of armaments was not popular 
+  on the medieval battlefield.
   </p>
 ...

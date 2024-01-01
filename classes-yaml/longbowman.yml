@@ -1,0 +1,49 @@
+--- # The English Longbowman
+title: "ENGLISH LONGBOWMAN"
+class_title: "The Longbowman"
+point_cost: 8
+description: >
+  A man trained in the English tradition of longbow.
+  
+half_movement:
+  foot: 6
+  horse: 9
+  
+level_advancement_table:
+  - {level: 1, attk: 1, def: 3, firing: 3, morale: 8, FC: "-" }
+  - {level: 2, attk: 1, def: 3, firing: 5, morale: 8, FC: "-" }
+  - {level: 3, attk: 1, def: 4, firing: 5, morale: 7, FC: "-" }
+  - {level: 4, attk: 1, def: "4/2", firing: 7, morale: 6, FC: "-" }
+  - {level: 5, attk: 1, def: "4/2", firing: 9, morale: 5, FC: "Enchanted Arrow" }
+  
+combat_type_table:
+  - {type: LF, weapon_rank: 1-6, armor_class: "leather"}
+  - {type: MF, weapon_rank: "-", armor_class: "brigandine"}
+  - {type: HF, weapon_rank: "-", armor_class: "-"}
+  - {type: LC, weapon_rank: "-", armor_class: "leather, brigandine"}
+  - {type: MC, weapon_rank: "-", armor_class: "-"}
+  - {type: HC, weapon_rank: "-", armor_class: "-"}
+
+class_features: 
+  - feature: English longbow
+    description: >
+      English longbows have exceptionally heavy draw weights, requiring conditioning 
+      through repeated practice. The longbowman is the only class who has this practice. 
+      The longbowman may use the English longbow with either ATK or AIM dice. 
+      If resting overnight in a wooded area, the longbowman will replenish his own arrows.
+  - feature: Defensive stakes
+    description: >
+      If a longbowman has been unmoved for 2 turns on soft ground, and has the defensive stakes, 
+      then the longbowman will have placed the stakes around his position. 
+      This grants additional defenses against cavalry and frontal attacks.
+  - feature: Arm moveent
+    description: >
+      Archery requires free arm movement. For armor, longbowmen can only equip gambeson, leather or brigandine.
+  - feature: Fantasy Combat
+    description: >
+      At 5th level, the Enlish longbowman can attack FC-only creatures with his normal archery, 
+      treating his arrow as though an enchanted arrow on the Fantasy Combat table.
+      
+starting_equipment: >
+  English longbow, 15 arrows, quiver, archer axe, defensive stakes.
+...

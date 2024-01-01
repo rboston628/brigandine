@@ -27,7 +27,7 @@ class_features:
   - feature: Blessings
     description: >
       A priest is able to say blessings. This is limited by his number of daily blessings. See below.
-  - feaure: Exorcism
+  - feature: Exorcism
     description: >
       A priest may use his prayers and crucifix to attack certain creatues in Fantasy Combat 
       as though armed with a magic sword:

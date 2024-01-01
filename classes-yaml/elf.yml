@@ -48,7 +48,7 @@ class_features:
       As such, fairies progress more slowly and do not progress in 
       rank beyond 2nd, as it would take several hundred more years 
       to reach rank 3.
-  - feaure: Iron aversion
+  - feature: Iron aversion
     description: >
       Fairies cannot abide the touch of iron.  Normal steel takes 
       half-again as many kills against a fairy (i.e. 1.5x), and more 

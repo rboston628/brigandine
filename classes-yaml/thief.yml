@@ -27,7 +27,7 @@ class_features:
   - feature: Sneak
     description: >
       The thief is able to sneak past enemy forces.
-  - feaure: Pick locks
+  - feature: Pick locks
     description: >
       The thief can pick locks, if he possesses the correct tools.
   - feature: Disarm traps

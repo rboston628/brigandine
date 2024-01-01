@@ -38,7 +38,7 @@ class_features:
       All peasants in one unit have the same core stats. 
       If there is ambiguity about unit core stats, use 
       <a href="https://www.ncbi.nlm.nih.gov/books/NBK540990/">the mode</a>.
-  - feaure: Reluctant soldiers
+  - feature: Reluctant soldiers
     description: >
       Each unit of peasants in the player's control must pass a morale check at the beginning 
       of each round of combat. If failed, that unit does not act that round. 

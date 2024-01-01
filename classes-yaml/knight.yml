@@ -28,7 +28,7 @@ class_features:
   - feature: Doughty
     description: >
       A knight need not check morale in combat.
-  - feaure: Impetuous
+  - feature: Impetuous
     description: >
       A knight tauned by a similarly powerful enemy combatant must <b>fail</b> 
       a morale check or else the knight <b>will</b> charge and engage in 

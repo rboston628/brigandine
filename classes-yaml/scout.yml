@@ -27,7 +27,7 @@ class_features:
     description: >
       The scout is able to sneak past enemy forces. To sneak... 
       The scout must be in appropriate armor to sneak.
-  - feaure: Archery
+  - feature: Archery
     description: >
       The scout is skilled at archery, but must be in appropriate armor.
 
