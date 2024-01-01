@@ -1,29 +1,29 @@
 --- # The Thief
 title: "THIEF"
-class-title: "The Thief"
-point-cost: 4
+class_title: "The Thief"
+point_cost: 4
 description: >
   A lowlife criminal, who nonetheless has some 
   skill which may be useful on this mission.
   
-half-movement:
+half_movement:
   foot: 5
   horse: 12
   
-level-advancement-table:
+level_advancement_table:
   - {level: 1, attk: 1, def: 1, firing: 1, morale: 10, FC: "-" }
   - {level: 2, attk: 1, def: 2, firing: 1, morale: 9, FC: "-" }
   - {level: 3, attk: 1, def: 2, firing: 1, morale: 8, FC: "-" }
   
-combat-type-table:
-  - {type: LF, weapon-rank: 1-6, armor-class: leather}
-  - {type: MF, weapon-rank: "-", armor-class: "-"}
-  - {type: HF, weapon-rank: "-", armor-class: "-"}
-  - {type: LC, weapon-rank: "-", armor-class: leather}
-  - {type: MC, weapon-rank: "-", armor-class: "-"}
-  - {type: HC, weapon-rank: "-", armor-class: "-"}
+combat_type_table:
+  - {type: LF, weapon_rank: 1-6, armor_class: leather}
+  - {type: MF, weapon_rank: "-", armor_class: "-"}
+  - {type: HF, weapon_rank: "-", armor_class: "-"}
+  - {type: LC, weapon_rank: "-", armor_class: leather}
+  - {type: MC, weapon_rank: "-", armor_class: "-"}
+  - {type: HC, weapon_rank: "-", armor_class: "-"}
 
-class-features: 
+class_features: 
   - feature: Sneak
     description: >
       The thief is able to sneak past enemy forces.
@@ -45,6 +45,6 @@ class-features:
       or that the others in his party might fail to neutralize a threat, or that the whole gang will be caught, 
       he will silently slip away to safety, carrying off whatever loot he can.
 
-starting-equipment: >
+starting_equipment: >
   Dagger, lock picks, rope, someone else's coin purse.
 ...

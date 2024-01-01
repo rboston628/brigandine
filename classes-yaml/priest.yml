@@ -1,29 +1,29 @@
 --- # The Priest
 title: "PRIEST"
-class-title: "The Priest"
-point-cost: 6
+class_title: "The Priest"
+point_cost: 6
 description: >
   A holyman, seeking spiritual answers or ancient holy artifacts.
   
-half-movement:
+half_movement:
   foot: 4
   horse: 6
 
-level-advancement-columns: ["level", "&#35;attk", "&#35;def", "&#35;firing","morale","FC","daily blessings"]
-level-advancement-table:
+level_advancement_columns: ["level", "&#35;attk", "&#35;def", "&#35;firing","morale","FC","daily blessings"]
+level_advancement_table:
   - {level: 1, attk: 1, def: 1, firing: 0, morale: 6, FC: "-", ks: 1}
   - {level: 2, attk: 1, def: 1, firing: 0, morale: 5, FC: "-", ks: 3}
   - {level: 3, attk: 1, def: 1, firing: 0, morale: 4, FC: "-", ks: 5}
   
 combat-type-table:
-  - {type: LF, weapon-rank: "-", armor-class: all}
-  - {type: MF, weapon-rank: "-", armor-class: "-"}
-  - {type: HF, weapon-rank: "-", armor-class: "-"}
-  - {type: LC, weapon-rank: "-", armor-class: all}
-  - {type: MC, weapon-rank: "-", armor-class: "-"}
-  - {type: HC, weapon-rank: "-", armor-class: "-"}
+  - {type: LF, weapon_rank: "-", armor_class: all}
+  - {type: MF, weapon_rank: "-", armor_class: "-"}
+  - {type: HF, weapon_rank: "-", armor_class: "-"}
+  - {type: LC, weapon_rank: "-", armor_class: all}
+  - {type: MC, weapon_rank: "-", armor_class: "-"}
+  - {type: HC, weapon_rank: "-", armor_class: "-"}
 
-class-features:
+class_features:
   - feature: Blessings
     description: >
       A priest is able to say blessings. This is limited by his number of daily blessings. See below.
@@ -57,7 +57,7 @@ class-features:
       Repeated refusal by soldiers may cause blessings to fail. 
       The words of evensong are engraved on the priest's heart; they may be recalled without the prayerbook.
       
-starting-equipment: >
+starting_equipment: >
   Crucifix, robe, pyx box, prayer book.
   
 additional: >

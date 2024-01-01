@@ -1,31 +1,31 @@
 --- # Peasant Levies
 title: "PEASANTS"
-class-title: "Peasant Levies"
-point-cost: "1 each"
+class_title: "Peasant Levies"
+point_cost: "1 each"
 description: >
   Represents commoners, often farmers, who have been swept up into the business of war. 
   Often used as canon fodder in wars, can also be assigned the menial task of 
   carrying equipment or assisting other characters.
   
-half-movement:
+half_movement:
   foot: 5
   horse: 9
   
-level-advancement-table:
+level_advancement_table:
   - {level: 1, attk: 1, def: 1, firing: 1, morale: 8, FC: "-" }
   - {level: 2, attk: 1, def: 1, firing: 1, morale: 7, FC: "-" }
   - {level: 3, attk: 1, def: 1, firing: 1, morale: 6, FC: "-" }
   - {level: "4</th><td colspan=\"6\" style=\"text-align:center;\"> as level 1 infantryman"}
   
-combat-type-table:
-  - {type: LF, weapon-rank: 1-6, armor-class: "leather, mail"}
-  - {type: MF, weapon-rank: "-", armor-class: "plate"}
-  - {type: HF, weapon-rank: "-", armor-class: "-"}
-  - {type: LC, weapon-rank: "-", armor-class: "leather, mail, plate"}
-  - {type: MC, weapon-rank: "-", armor-class: "-"}
-  - {type: HC, weapon-rank: "-", armor-class: "-"}
+combat_type_table:
+  - {type: LF, weapon_rank: 1-6, armor_class: "leather, mail"}
+  - {type: MF, weapon_rank: "-", armor_class: "plate"}
+  - {type: HF, weapon_rank: "-", armor_class: "-"}
+  - {type: LC, weapon_rank: "-", armor_class: "leather, mail, plate"}
+  - {type: MC, weapon_rank: "-", armor_class: "-"}
+  - {type: HC, weapon_rank: "-", armor_class: "-"}
 
-class-features:
+class_features:
   - feature: Unexceptional
     description: >
       Peasants are the common folk, and so each peasant has d6 for all stats. 
@@ -48,6 +48,6 @@ class-features:
       Those peasants who survive on the battlefield beyond 3rd level may be appointed as 
       1st level infantrymen.  This promoted peasant still has a point-buy of 1.
 
-starting-equipment: >
+starting_equipment: >
   Gambeson, polearm (either billhook or guisarm), a hunting knife (as dagger).
 ...

@@ -1,30 +1,30 @@
 --- # The Knight
 title: "KNIGHT"
-class-title: "The Knight"
-point-cost: 10
+class_title: "The Knight"
+point_cost: 10
 description: >
   Representing the peak of military prowess.
   
-half-movement:
+half_movement:
   foot: 3
   horse: 6
   
-level-advancement-table:
+level_advancement_table:
   - {level: 1, attk: 2, def: 2/2, firing: 1, morale: 6, FC: "-" }
   - {level: 2, attk: 2, def: 4/2, firing: 1, morale: 6, FC: "-" }
   - {level: 3, attk: 3, def: 4/3, firing: 1, morale: 6, FC: "-" }
   - {level: 4, attk: 4, def: 4/4, firing: 1, morale: 4, FC: Hero}
   - {level: 5, attk: 5, de": 5/5, firing: 1, morale: 4, FC: Hero}
   
-combat-type-table:
-  - {type: LF, weapon-rank: 1-4, armor-class: leather}
-  - {type: MF, weapon-rank: 5-8, armor-class: mail}
-  - {type: HF, weapon-rank:  8+, armor-class: plate}
-  - {type: LC, weapon-rank: 1-4, armor-class: leather}
-  - {type: MC, weapon-rank: 5-8, armor-class: mail}
-  - {type: HC, weapon-rank:  8+, armor-class: plate}
+combat_type_table:
+  - {type: LF, weapon_rank: 1-4, armor_class: leather}
+  - {type: MF, weapon_rank: 5-8, armor_class: mail}
+  - {type: HF, weapon_rank:  8+, armor_class: plate}
+  - {type: LC, weapon_rank: 1-4, armor_class: leather}
+  - {type: MC, weapon_rank: 5-8, armor_class: mail}
+  - {type: HC, weapon_rank:  8+, armor_class: plate}
 
-class-features:
+class_features:
   - feature: Doughty
     description: >
       A knight need not check morale in combat.
@@ -37,6 +37,6 @@ class-features:
     description: >
       At 4th level, a knight may attack as a Hero on the Fantasy Combat table.
       
-starting-equipment: >
+starting_equipment: >
   Poll axe, arming sword, shield, chainmail, horse.
 ...

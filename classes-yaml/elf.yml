@@ -20,24 +20,24 @@ description: >
   If you choose to play as an elf, you must play <i>as</i> an elf.  
   Your motivatons and psyche are not those of a human.
   
-half-movement:
+half_movement:
   foot: 4
   horse: 6
 
-level-advancement-columns: ["level", "&#35;attk", "&#35;def", "&#35;firing","morale","FC","known spells"]
-level-advancement-table:
+level_advancement_columns: ["level", "&#35;attk", "&#35;def", "&#35;firing","morale","FC","known spells"]
+level_advancement_table:
   - {level: 1, attk: 2, def: "2/2", firing: 3, morale: 10, FC: "-", ks: 3 }
   - {level: 2, attk: 3, def: "2/2", firing: 3, morale: 9, FC: "Hero", ks: 5 }
   
-combat-type-table:
-  - {type: LF, weapon-rank: "1-4", armor-class: "leather,mail,plate"}
-  - {type: MF, weapon-rank: "5-8", armor-class: "suite-of-plate"}
-  - {type: HF, weapon-rank: "9+", armor-class: "mithril"}
-  - {type: LC, weapon-rank: "1-4", armor-class: "all armor"}
-  - {type: MC, weapon-rank: "5-8", armor-class: "-"}
-  - {type: HC, weapon-rank: "9+", armor-class: "-"}
+combat_type_table:
+  - {type: LF, weapon_rank: "1-4", armor_class: "leather,mail,plate"}
+  - {type: MF, weapon_rank: "5-8", armor_class: "suite-of-plate"}
+  - {type: HF, weapon_rank: "9+", armor_class: "mithril"}
+  - {type: LC, weapon_rank: "1-4", armor_class: "all armor"}
+  - {type: MC, weapon_rank: "5-8", armor_class: "-"}
+  - {type: HC, weapon_rank: "9+", armor_class: "-"}
 
-class-features:
+class_features:
   - feature: Eldar time
     description: >
       You are hundreds, perhaps thousands of years old. 
@@ -85,6 +85,6 @@ class-features:
     description: >
       At level 2, Elves may fight in Fantasy Combat as Hero types.
       
-starting-equipment: >
+starting_equipment: >
   Scalemail, scimitar, amulet.
 ...

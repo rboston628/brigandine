@@ -1,7 +1,7 @@
 --- # The Monk
 title: "MONK"
-class-title: "Monk"
-point-cost: 1
+class_title: "Monk"
+point_cost: 1
 description: >
   A holyman who has retired from the secular world to seek spiritual contemplation. 
   A monk is adept at gardening, cooking, and other simple crafts. 
@@ -9,23 +9,23 @@ description: >
   </p><p>
   It is unknown why you have left your abbey to venture into distant lands and dark tunnels.
   
-half-movement:
+half_movement:
   foot: 4
   horse: 6
 
-level-advancement-columns: *default-level-advancement-columns
-level-advancement-table:
+level_advancement_columns: *default-level-advancement-columns
+level_advancement_table:
   - {level: 1, attk: 1, def: 1, firing: 0, morale: 11, FC: "-"}
   
-combat-type-table:
-  - {type: LF, weapon-rank: "-", armor-class: "unarmored"}
-  - {type: MF, weapon-rank: "-", armor-class: "-"}
-  - {type: HF, weapon-rank: "-", armor-class: "-"}
-  - {type: LC, weapon-rank: "-", armor-class: "unarmored"}
-  - {type: MC, weapon-rank: "-", armor-class: "-"}
-  - {type: HC, weapon-rank: "-", armor-class: "-"}
+combat_type_table:
+  - {type: LF, weapon_rank: "-", armor_class: "unarmored"}
+  - {type: MF, weapon_rank: "-", armor_class: "-"}
+  - {type: HF, weapon_rank: "-", armor_class: "-"}
+  - {type: LC, weapon_rank: "-", armor_class: "unarmored"}
+  - {type: MC, weapon_rank: "-", armor_class: "-"}
+  - {type: HC, weapon_rank: "-", armor_class: "-"}
 
-class-features:
+class_features:
   - feature: Blessings
     description: >
       A monk is not ordained and cannot say blessings, unlike the priest.
@@ -41,7 +41,7 @@ class-features:
       Each night, the monk must sing evensong. 
       The other soldiers on the adventure are invited to join the monk in prayer.
       
-starting-equipment: >
+starting_equipment: >
   Crucifix, robe, prayerbook.
   
 additional: >

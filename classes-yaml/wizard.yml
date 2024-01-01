@@ -1,31 +1,31 @@
 --- # The Wizard
 title: "WIZARD"
-class-title: "The Wizard"
-point-cost: 12
+class_title: "The Wizard"
+point_cost: 12
 description: >
   Learned in forbidden lore, capable of tapping arcane powers.
   
-half-movement:
+half_movement:
   foot: 3
   horse: 6
 
-level-advancement-columns: ["level", "&#35;attk", "&#35;def", "&#35;firing" ,"morale", "FC", "spell die"]
-level-advancement-table:
+level_advancement_columns: ["level", "&#35;attk", "&#35;def", "&#35;firing" ,"morale", "FC", "spell die"]
+level_advancement_table:
   - {level: 1, attk: 1, def: 1, firing: 1, morale: 8, FC: "-", ks: d3}
   - {level: 2, attk: 1, def: 1, firing: 1, morale: 7, FC: "-", ks: d4}
   - {level: 3, attk: 1, def: 1, firing: 1, morale: 6, FC: "-", ks: d5}
   - {level: 4, attk: 1, def: 1, firing: 1, morale: 6, FC: "Wizard", ks: d6}
   - {level: 5, attk: 1, def: 1, firing: 1, morale: 6, FC: "Wizard", ks: d7}
   
-combat-type-table:
-  - {type: LF, weapon-rank: "-", armor-class: all}
-  - {type: MF, weapon-rank: "-", armor-class: "-"}
-  - {type: HF, weapon-rank: "-", armor-class: "-"}
-  - {type: LC, weapon-rank: "-", armor-class: all}
-  - {type: MC, weapon-rank: "-", armor-class: "-"}
-  - {type: HC, weapon-rank: "-", armor-class: "-"}
+combat_type_table:
+  - {type: LF, weapon_rank: "-", armor_class: all}
+  - {type: MF, weapon_rank: "-", armor_class: "-"}
+  - {type: HF, weapon_rank: "-", armor_class: "-"}
+  - {type: LC, weapon_rank: "-", armor_class: all}
+  - {type: MC, weapon_rank: "-", armor_class: "-"}
+  - {type: HC, weapon_rank: "-", armor_class: "_"}
 
-class-features:
+class_features:
   - feature: Magic
     description: >
       A mage is able to cast terrible spells.  
@@ -45,7 +45,7 @@ class-features:
       roll the spell die after the casting has been declared.  
       The spell die resets after a full night's rest and an hour 
       spent in quiet study.
-  - feature: Arcane strength
+  - feature: Inner strength
     description: >
       Wizards are masters of arcane knowledge, who have spent long lives in 
       perplexing study.  As such they are weak, feeble, and often quite elderly. 
@@ -64,6 +64,6 @@ class-features:
       Beginning at 4th rank, a Wizard can attack on the Fantasy Combat tables 
       as a Wizard.
 
-starting-equipment: >
+starting_equipment: >
   Robe and wizard hat, staff, grimoire.
 ...

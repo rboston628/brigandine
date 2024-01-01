@@ -1,28 +1,28 @@
 --- # The Scout
 title: "SCOUT"
-class-title: "The Scout"
-point-cost: 3
+class_title: "The Scout"
+point_cost: 3
 description: >
   A light soldier for surveying, rencounters, and missile fire.
   
-half-movement:
+half_movement:
   foot: 5
   horse: 12
   
-level-advancement-table:
+level_advancement_table:
   - {level: 1, attk: 1, def: 1, firing: 3, morale: 7, FC: "-" }
   - {level: 2, attk: 1, def: 2, firing: 3, morale: 7, FC: "-" }
   - {level: 3, attk: 2, def: 3, firing: 5, morale: 6, FC: "-" }
   
-combat-type-table:
-  - {type: LF, weapon-rank: 1-6, armor-class: "leather, mail"}
-  - {type: MF, weapon-rank: "-", armor-class: "plate"}
-  - {type: HF, weapon-rank: "-", armor-class: "-"}
-  - {type: LC, weapon-rank: "-", armor-class: "leather, mail, plate"}
-  - {type: MC, weapon-rank: "-", armor-class: "-"}
-  - {type: HC, weapon-rank: "-", armor-class: "-"}
+combat_type_table:
+  - {type: LF, weapon_rank: 1-6, armor_class: "leather, mail"}
+  - {type: MF, weapon_rank: "-", armor_class: "plate"}
+  - {type: HF, weapon_rank: "-", armor_class: "-"}
+  - {type: LC, weapon_rank: "-", armor_class: "leather, mail, plate"}
+  - {type: MC, weapon_rank: "-", armor_class: "-"}
+  - {type: HC, weapon_rank: "-", armor_class: "-"}
 
-class-features: 
+class_features: 
   - feature: Sneak
     description: >
       The scout is able to sneak past enemy forces. To sneak... 
@@ -31,6 +31,6 @@ class-features:
     description: >
       The scout is skilled at archery, but must be in appropriate armor.
 
-starting-equipment: >
+starting_equipment: >
   Shortsword, self bow, quiver, 15 arrows, leather armor.
 ...
